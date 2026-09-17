@@ -77,7 +77,7 @@
       return a;
     });
 
-    var W, H, start = null, DUR = 3077; // 全体の長さ（2026-09-17 固定版の回転スピード65%：2秒÷0.65≒3.08秒。動き方は固定版のまま）
+    var W, H, start = null, DUR = 2500; // 全体の長さ（2026-09-17 固定版の回転スピード80%：2秒÷0.8＝2.5秒。動き方は固定版のまま）
     var size = function () { W = stage.offsetWidth; H = stage.offsetHeight; };
     size();
 
