@@ -176,7 +176,7 @@
           var w = 46 + local * (L.fw - 46);
           var lp = 1 - Math.pow(1 - local, 1.28);
           var op = (lp < 0.08 ? lp / 0.08 : 1) * (lp > 0.72 ? Math.max(0, 1 - (lp - 0.72) / 0.28) : 1) * 0.94;
-          var ang = lp * Math.PI * 2 * 1 + phase * Math.PI * 2; // 回る回数（2026-09-17 Toshiさん指示：2.6回転→1回転）
+          var ang = lp * Math.PI * 2 * 2.6 + phase * Math.PI * 2;
           var SPREAD = W > 900 ? 1.85 : 1.30;
           var OUT = 0.72, radK;
           if (lp < OUT) { radK = 1 - (lp / OUT) * 0.66; } else { var k = (lp - OUT) / (1 - OUT); radK = 0.34 + k * k * 1.75; }
