@@ -43,13 +43,13 @@
   var stage = $('#stage');
   if (stage && heroEl) {
     var base = heroEl.getAttribute('data-assets');
-    // 渦の写真（2026-09-17 Toshiさん指示：20枚→4枚。何の写真か分かるもの）
-    var items = [
-      base + 'process/aero-air-05.jpg',
-      base + 'process/auto-car-03.jpg',
-      base + 'industry/semiconductor.jpg',
-      base + 'industry/storage.jpg'
-    ];
+    var TAGS = ['aero-air', 'aero-engine', 'auto-car', 'auto-engine'];
+    var items = [];
+    for (var i = 0; i < 5; i++) {
+      for (var t = 0; t < 4; t++) {
+        items.push(base + 'process/' + TAGS[t] + '-0' + [1, 3, 5, 7, 9][i] + '.jpg');
+      }
+    }
     var finals = [
       { src: heroEl.getAttribute('data-photo-gap') || base + 'product/gapman-hero.jpg', en: 'GAPMAN', ja: '見えない隙間', cls: 'is-gap', href: heroEl.getAttribute('data-gapman') },
       { src: heroEl.getAttribute('data-photo-hyp') || base + 'product/hyperthermia-hero.jpg', en: 'HYPERTHERMIA', ja: '見えない熱', cls: 'is-hyp', href: heroEl.getAttribute('data-hyper') }
@@ -76,7 +76,7 @@
       return a;
     });
 
-    var W, H, start = null, DUR = 1500; // 全体の長さ（2026-09-17 Toshiさん指示：9.6秒→1.5秒。動き方は変えない）
+    var W, H, start = null, DUR = 9600;
     var size = function () { W = stage.offsetWidth; H = stage.offsetHeight; };
     size();
 
