@@ -47,6 +47,7 @@
     var items = [];
     for (var i = 0; i < 5; i++) {
       for (var t = 0; t < 4; t++) {
+        if ((i + t) % 2) { continue; } // 写真は1枚おきに10枚（2026-09-17 Toshiさん指示：20枚→10枚）
         items.push(base + 'process/' + TAGS[t] + '-0' + [1, 3, 5, 7, 9][i] + '.jpg');
       }
     }
@@ -76,7 +77,7 @@
       return a;
     });
 
-    var W, H, start = null, DUR = 9600;
+    var W, H, start = null, DUR = 3000; // 全体の長さ（2026-09-17 Toshiさん指示：9.6秒→3秒）
     var size = function () { W = stage.offsetWidth; H = stage.offsetHeight; };
     size();
 
