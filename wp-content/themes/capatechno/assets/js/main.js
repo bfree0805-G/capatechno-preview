@@ -77,7 +77,7 @@
       return a;
     });
 
-    var W, H, start = null, DUR = 3000; // 全体の長さ（2026-09-17 Toshiさん指示：9.6秒→3秒）
+    var W, H, start = null, DUR = 2000; // 全体の長さ（2026-09-17 Toshiさん指示：9.6秒→3秒→2秒）
     var size = function () { W = stage.offsetWidth; H = stage.offsetHeight; };
     size();
 
