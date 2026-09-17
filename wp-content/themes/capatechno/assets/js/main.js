@@ -43,24 +43,28 @@
   var stage = $('#stage');
   if (stage && heroEl) {
     var base = heroEl.getAttribute('data-assets');
-    var TAGS = ['aero-air', 'aero-engine', 'auto-car', 'auto-engine'];
-    var items = [];
-    for (var i = 0; i < 5; i++) {
-      for (var t = 0; t < 4; t++) {
-        items.push(base + 'process/' + TAGS[t] + '-0' + [1, 3, 5, 7, 9][i] + '.jpg');
-      }
-    }
+    // 渦の写真は4枚（2026-09-17 Toshiさん指示：枚数を減らし、何の写真か分かるように。業種名の札つき）
+    var items = [
+      { src: base + 'process/aero-air-05.jpg', label: '航空宇宙' },
+      { src: base + 'process/auto-car-03.jpg', label: '自動車' },
+      { src: base + 'industry/semiconductor.jpg', label: '半導体' },
+      { src: base + 'industry/storage.jpg', label: 'コンピュータ周辺・記録装置' }
+    ];
     var finals = [
       { src: heroEl.getAttribute('data-photo-gap') || base + 'product/gapman-hero.jpg', en: 'GAPMAN', ja: '見えない隙間', cls: 'is-gap', href: heroEl.getAttribute('data-gapman') },
       { src: heroEl.getAttribute('data-photo-hyp') || base + 'product/hyperthermia-hero.jpg', en: 'HYPERTHERMIA', ja: '見えない熱', cls: 'is-hyp', href: heroEl.getAttribute('data-hyper') }
     ];
 
-    var nodes = items.map(function (src, idx) {
+    var nodes = items.map(function (it, idx) {
       var el = document.createElement('div');
       el.className = 'tile';
       var img = document.createElement('img');
-      img.src = src; img.alt = ''; img.decoding = 'async';
+      img.src = it.src; img.alt = ''; img.decoding = 'async';
       el.appendChild(img);
+      var lb = document.createElement('span');
+      lb.className = 'tile__lbl';
+      lb.textContent = it.label;
+      el.appendChild(lb);
       stage.appendChild(el);
       return { el: el, i: idx };
     });
@@ -76,7 +80,7 @@
       return a;
     });
 
-    var W, H, start = null, DUR = 3000; // 渦が回る時間（2026-09-17 Toshiさん指示：9.6秒→3.0秒。動き方は変えない）
+    var W, H, start = null, DUR = 1500; // 全体の長さ（2026-09-17 Toshiさん指示：9.6秒→3.0秒→1.5秒。動き方は変えない）
     var size = function () { W = stage.offsetWidth; H = stage.offsetHeight; };
     size();
 
@@ -170,12 +174,12 @@
         var L = landing();
         nodes.forEach(function (n) {
           var phase = n.i / nodes.length;
-          var local = Math.max(0, Math.min((ease - phase * 0.62) / 0.38, 1));
+          var local = Math.max(0, Math.min((ease - phase * 0.5) / 0.5, 1)); // 1枚が回っている時間を長めに（4枚なので重なりは少ない）
           if (local <= 0) { n.el.style.opacity = 0; return; }
           var w = 46 + local * (L.fw - 46);
           var lp = 1 - Math.pow(1 - local, 1.28);
           var op = (lp < 0.08 ? lp / 0.08 : 1) * (lp > 0.72 ? Math.max(0, 1 - (lp - 0.72) / 0.28) : 1) * 0.94;
-          var ang = lp * Math.PI * 2 * 2.6 + phase * Math.PI * 2;
+          var ang = lp * Math.PI * 2 * 0.5 + phase * Math.PI * 2; // 1枚の回転は0.5周（1秒あたり約0.67周。何の写真か見える速さ）
           var SPREAD = W > 900 ? 1.85 : 1.30;
           var OUT = 0.72, radK;
           if (lp < OUT) { radK = 1 - (lp / OUT) * 0.66; } else { var k = (lp - OUT) / (1 - OUT); radK = 0.34 + k * k * 1.75; }
