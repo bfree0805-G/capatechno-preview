@@ -82,7 +82,7 @@
       return a;
     });
 
-    var W, H, start = null, DUR = 3200; // 両サイドの2枚が止まるまで（2026-09-17：9.6秒→5.2秒→3.2秒）
+    var W, H, start = null, DUR = 3000; // 渦が回る時間（2026-09-17 Toshiさん指示：3.0秒。回り方は変えない）
     var size = function () { W = stage.offsetWidth; H = stage.offsetHeight; };
     size();
 
@@ -182,7 +182,7 @@
           var w = w0 + local * (Math.max(L.fw * 0.85, w0) - w0);
           var lp = 1 - Math.pow(1 - local, 1.28);
           var op = (lp < 0.08 ? lp / 0.08 : 1) * (lp > 0.72 ? Math.max(0, 1 - (lp - 0.72) / 0.28) : 1);
-          var ang = lp * Math.PI * 2 * 0.7 + phase * Math.PI * 2; // 回転 2.6周→0.7周（時間を縮めても1枚ずつは速すぎないように）
+          var ang = lp * Math.PI * 2 * 1.1 + phase * Math.PI * 2; // 回り方は1.1周（2026-09-17 Toshiさん指示で固定）
           var SPREAD = W > 900 ? 1.85 : 1.30;
           var OUT = 0.72, radK;
           // 見出しの上を通らないよう、半径を大きめに保って周りを回す（2026-09-17）
