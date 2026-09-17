@@ -47,7 +47,7 @@
     var items = [];
     for (var i = 0; i < 5; i++) {
       for (var t = 0; t < 4; t++) {
-        if ((i + t) % 2) { continue; } // 写真は1枚おきに10枚（2026-09-17 Toshiさん指示：20枚→10枚）
+        if ((i + t) % 4) { continue; } // 写真は5枚（2026-09-17 Toshiさん指示：枚数を減らす。20枚→5枚）
         items.push(base + 'process/' + TAGS[t] + '-0' + [1, 3, 5, 7, 9][i] + '.jpg');
       }
     }
@@ -171,7 +171,7 @@
         var L = landing();
         nodes.forEach(function (n) {
           var phase = n.i / nodes.length;
-          var local = Math.max(0, Math.min((ease - phase * 0.62) / 0.38, 1));
+          var local = Math.max(0, Math.min((ease - phase * 0.411) / 0.589, 1)); // 回転スピードをゆっくりに（2026-09-17 Toshiさん指示。となりの写真との並び方は初期段階と同じになる数字）
           if (local <= 0) { n.el.style.opacity = 0; return; }
           var w = 46 + local * (L.fw - 46);
           var lp = 1 - Math.pow(1 - local, 1.28);
