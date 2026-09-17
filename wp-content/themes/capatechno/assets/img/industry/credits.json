@@ -1,0 +1,74 @@
+{
+  "semiconductor.jpg": {
+    "industry": "半導体",
+    "title": "File:Clean room.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Clean_room.jpg",
+    "author": "NASA Glenn Research Center (uploaded by Wikimedia Commons user Duk)",
+    "license": "Public domain",
+    "attribution_required": false
+  },
+  "film.jpg": {
+    "industry": "フィルム・コンバーティング",
+    "title": "File:Saran film manufacturing at Dow Chemical Company - DPLA - c4737142878ce972054351e5815bdf4b.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Saran_film_manufacturing_at_Dow_Chemical_Company_-_DPLA_-_c4737142878ce972054351e5815bdf4b.jpg",
+    "author": "Dow Chemical Company (via Science History Institute / Digital Public Library of America)",
+    "license": "No known copyright restrictions",
+    "attribution_required": false
+  },
+  "printing.jpg": {
+    "industry": "複写機・印刷機",
+    "title": "File:Old Threshers Miehle Press Drum.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Old_Threshers_Miehle_Press_Drum.jpg",
+    "author": "Douglas W. Jones",
+    "license": "CC0",
+    "attribution_required": false
+  },
+  "storage.jpg": {
+    "industry": "コンピュータ周辺・記録装置",
+    "title": "File:Open hard-drive.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Open_hard-drive.jpg",
+    "author": "Zzubnik",
+    "license": "Public domain",
+    "attribution_required": false
+  },
+  "power.jpg": {
+    "industry": "電力・発電",
+    "title": "File:VIEW OF TURBINE HALL LOOKING SOUTHWEST AT WESTINGHOUSE-PARSONS TURBINE NUMBER 2 - Cos Cob Power Plant - HAER CONN,1-GREWI,15A-40.tif",
+    "page": "https://commons.wikimedia.org/wiki/File:VIEW_OF_TURBINE_HALL_LOOKING_SOUTHWEST_AT_WESTINGHOUSE-PARSONS_TURBINE_NUMBER_2._THIS_UNIT_WAS_INSTALLED_IN_1925._-_New_York,_New_Haven_and_Hartford_Railroad,_Cos_Cob_Power_HAER_CONN,1-GREWI,15A-40.tif",
+    "author": "Jet Lowe / Historic American Engineering Record (Library of Congress)",
+    "license": "Public domain",
+    "attribution_required": false
+  },
+  "nuclear.jpg": {
+    "industry": "原子力",
+    "title": "File:Control room of Commonwealth Edison Company's Dresden nuclear power station.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Control_room_of_Commonwealth_Edison_Company%27s_Dresden_nuclear_power_station.jpg",
+    "author": "U.S. Department of Energy (ENERGY.GOV)",
+    "license": "Public domain",
+    "attribution_required": false
+  },
+  "materials-testing.jpg": {
+    "industry": "材料試験",
+    "title": "File:Modern universal testing machine.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Modern_universal_testing_machine.jpg",
+    "author": "Ganitz",
+    "license": "CC BY-SA 4.0",
+    "attribution_required": true
+  },
+  "research.jpg": {
+    "industry": "素粒子物理・研究機関",
+    "title": "File:HD.6B.220 (10996275004).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:HD.6B.220_(10996275004).jpg",
+    "author": "U.S. Department of Energy (ENERGY.GOV) — historic photo of the National Accelerator Laboratory (now Fermilab)",
+    "license": "Public domain",
+    "attribution_required": false
+  },
+  "machinery.jpg": {
+    "industry": "産業機械・モーター",
+    "title": "File:PutnamLatheHagley01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:PutnamLatheHagley01.jpg",
+    "author": "Ukexpat",
+    "license": "CC BY-SA 3.0",
+    "attribution_required": true
+  }
+}

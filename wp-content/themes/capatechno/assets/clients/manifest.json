@@ -1,0 +1,248 @@
+{
+  "Boeing": {
+    "file": "boeing.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Boeing_full_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Boeing_full_logo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Airbus": {
+    "file": "airbus.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Airbus_2014.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Logo_Airbus_2014.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Lockheed Martin": {
+    "file": "lockheed.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Lockheed_Martin_logo_(2011%E2%80%932022).svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lockheed_Martin_logo_(2011–2022).svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Pratt & Whitney": {
+    "file": "pratt-whitney.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Pratt_%26_Whitney_logo2023.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pratt_&_Whitney_logo2023.svg",
+    "license": "パブリックドメイン扱い(商標/PD-textlogo)"
+  },
+  "General Electric": {
+    "file": "ge.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/General_Electric_Signature_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:General_Electric_Signature_logo.svg",
+    "license": "パブリックドメイン(作者表記:General Electric)"
+  },
+  "Rolls-Royce": {
+    "file": "rolls-royce.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Rolls_royce_holdings_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Rolls_royce_holdings_logo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Ford": {
+    "file": "ford.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ford_logo_flat.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ford_logo_flat.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "General Motors": {
+    "file": "gm.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/General_motors_logo_with_wordmark.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:General_motors_logo_with_wordmark.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Porsche": {
+    "file": "porsche.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Porsche_Schriftzug.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Porsche_Schriftzug.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Applied Materials": {
+    "file": "applied-materials.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Applied_Materials_Logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Applied_Materials_Logo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Seagate": {
+    "file": "seagate.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Seagate_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Seagate_logo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "IBM": {
+    "file": "ibm.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/IBM_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:IBM_logo.svg",
+    "license": "パブリックドメイン(デザイン:Paul Rand)"
+  },
+  "HP": {
+    "file": "hp.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/HP_logo_2012.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:HP_logo_2012.svg",
+    "license": "パブリックドメイン(作者表記:HP Inc.)"
+  },
+  "Kodak": {
+    "file": "kodak.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Eastman_Kodak_Company_logo_(2016).svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Eastman_Kodak_Company_logo_(2016).svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "3M": {
+    "file": "3m.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/3M_wordmark.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:3M_wordmark.svg",
+    "license": "パブリックドメイン(デザイン:Siegel & Gale)"
+  },
+  "DuPont": {
+    "file": "dupont.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/DuPont_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:DuPont_logo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Xerox": {
+    "file": "xerox.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Xerox_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Xerox_logo.svg",
+    "license": "パブリックドメイン(作者表記:Xerox Corporation)"
+  },
+  "Siemens": {
+    "file": "siemens.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Siemens_AG_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Siemens_AG_logo.svg",
+    "license": "パブリックドメイン(作者表記:Siemens AG)"
+  },
+  "MIT": {
+    "file": "mit.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/MIT_2023_red_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:MIT_2023_red_logo.svg",
+    "license": "パブリックドメイン(デザイン:Matthew Carter他、MIT保有)"
+  },
+  "Oak Ridge National Laboratory": {
+    "file": "oak-ridge.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/d2/ORNLTNlogo.svg",
+    "page": "https://en.wikipedia.org/wiki/File:ORNLTNlogo.svg",
+    "license": "非自由(商標/fair use、英語版Wikipediaローカルファイル)"
+  },
+  "Fermilab": {
+    "file": "fermilab.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fermilab_Logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Fermilab_Logo.svg",
+    "license": "パブリックドメイン(作者表記:Fermilab Visual Media Services)"
+  },
+  "Argonne National Laboratory": {
+    "file": "argonne.png",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/ArgonneLaboratoryLogo.png",
+    "page": "https://commons.wikimedia.org/wiki/File:ArgonneLaboratoryLogo.png",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Brookhaven National Laboratory": {
+    "file": "brookhaven.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Brookhaven_National_Laboratory_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Brookhaven_National_Laboratory_logo.svg",
+    "license": "パブリックドメイン(作者表記:Brookhaven National Laboratory)"
+  },
+  "SLAC": {
+    "file": "slac.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/SLAC_LogoSD.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:SLAC_LogoSD.svg",
+    "license": "パブリックドメイン(作者表記:米エネルギー省)"
+  },
+  "CERN": {
+    "file": "cern.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/CERN_logo_badge.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:CERN_logo_badge.svg",
+    "license": "パブリックドメイン(作者表記:CERN)"
+  },
+  "Pechiney": {
+    "file": "pechiney.png",
+    "source": "https://upload.wikimedia.org/wikipedia/en/e/e8/Pechiney_logo.png",
+    "page": "https://en.wikipedia.org/wiki/File:Pechiney_logo.png",
+    "license": "非自由(商標/fair use、英語版Wikipediaローカルファイル)"
+  },
+  "Saint-Gobain": {
+    "file": "saint-gobain.png",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint-Gobain_Logo_2025.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Saint-Gobain_Logo_2025.png",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "PPG": {
+    "file": "ppg.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/PPG_Logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:PPG_Logo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "ASEA": {
+    "file": "asea.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Asealogo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Asealogo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Audi": {
+    "file": "audi.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Audi-Logo_2016.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Audi-Logo_2016.svg",
+    "license": "パブリックドメイン(デザイン:Strichpunkt/KMS Team)"
+  },
+  "Avery Dennison": {
+    "file": "avery-dennison.png",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Avery_Dennison_logo_red.svg (元SVGが440KBのためローカルでPNG化)",
+    "page": "https://commons.wikimedia.org/wiki/File:Avery_Dennison_logo_red.svg",
+    "license": "パブリックドメイン(作者表記:Avery Dennison)"
+  },
+  "Babcock & Wilcox": {
+    "file": "babcock-wilcox.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Babcock_%26_Wilcox_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Babcock_&_Wilcox_logo.svg",
+    "license": "パブリックドメイン(作者表記:Babcock & Wilcox)"
+  },
+  "Caterpillar": {
+    "file": "caterpillar.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Caterpillar_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Caterpillar_logo.svg",
+    "license": "パブリックドメイン(作者表記:Caterpillar Inc.)"
+  },
+  "DESY": {
+    "file": "desy.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Desy_logo_3c_web.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Desy_logo_3c_web.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Hyundai": {
+    "file": "hyundai.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Hyundai_Motor_Company_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hyundai_Motor_Company_logo.svg",
+    "license": "パブリックドメイン(作者表記:Hyundai Motor Company)"
+  },
+  "Kia": {
+    "file": "kia.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/KIA_logo3.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:KIA_logo3.svg",
+    "license": "パブリックドメイン(作者表記:Kia Corporation)"
+  },
+  "Maxtor": {
+    "file": "maxtor.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Maxtor-Logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Maxtor-Logo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  },
+  "Ontario Hydro": {
+    "file": "ontario-hydro.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ontario_Hydro_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ontario_Hydro_logo.svg",
+    "license": "パブリックドメイン(デザイン:Allan Fleming)"
+  },
+  "Peugeot": {
+    "file": "peugeot.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Wordmark_Peugeot_2021.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Wordmark_Peugeot_2021.svg",
+    "license": "パブリックドメイン(作者表記:Peugeot)"
+  },
+  "Renault": {
+    "file": "renault.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_Renault_Group_logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:2021_Renault_Group_logo.svg",
+    "license": "パブリックドメイン(作者表記:Renault S.A.)"
+  },
+  "Polaroid": {
+    "file": "polaroid.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Polaroid_Logo.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Polaroid_Logo.svg",
+    "license": "パブリックドメイン(PD-textlogo)"
+  }
+}
