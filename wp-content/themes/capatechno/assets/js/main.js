@@ -77,7 +77,7 @@
       return a;
     });
 
-    var W, H, start = null, DUR = 2000; // 全体の長さ（2026-09-17 Toshiさん指示：9.6秒→3秒→2秒）
+    var W, H, start = null, DUR = 4000; // 全体の長さ（2026-09-17 固定版を回転スピード50%に：2秒→4秒。動き方は固定版のまま）
     var size = function () { W = stage.offsetWidth; H = stage.offsetHeight; };
     size();
 
