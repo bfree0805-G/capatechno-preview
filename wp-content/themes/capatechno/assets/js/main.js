@@ -43,30 +43,24 @@
   var stage = $('#stage');
   if (stage && heroEl) {
     var base = heroEl.getAttribute('data-assets');
-    // 渦に流す写真と業種名（front-page.php の data-spiral。無ければ工程写真8枚）
+    var TAGS = ['aero-air', 'aero-engine', 'auto-car', 'auto-engine'];
     var items = [];
-    try { items = JSON.parse(heroEl.getAttribute('data-spiral') || '[]'); } catch (e) { items = []; }
-    if (!items.length) {
-      ['aero-air-05', 'auto-car-03', 'aero-engine-03', 'auto-engine-02', 'aero-air-01', 'auto-car-07', 'aero-engine-07', 'auto-engine-05']
-        .forEach(function (n) { items.push({ src: base + 'process/' + n + '.jpg', label: '' }); });
+    for (var i = 0; i < 5; i++) {
+      for (var t = 0; t < 4; t++) {
+        items.push(base + 'process/' + TAGS[t] + '-0' + [1, 3, 5, 7, 9][i] + '.jpg');
+      }
     }
     var finals = [
       { src: heroEl.getAttribute('data-photo-gap') || base + 'product/gapman-hero.jpg', en: 'GAPMAN', ja: '見えない隙間', cls: 'is-gap', href: heroEl.getAttribute('data-gapman') },
       { src: heroEl.getAttribute('data-photo-hyp') || base + 'product/hyperthermia-hero.jpg', en: 'HYPERTHERMIA', ja: '見えない熱', cls: 'is-hyp', href: heroEl.getAttribute('data-hyper') }
     ];
 
-    var nodes = items.map(function (it, idx) {
+    var nodes = items.map(function (src, idx) {
       var el = document.createElement('div');
       el.className = 'tile';
       var img = document.createElement('img');
-      img.src = it.src; img.alt = ''; img.decoding = 'async';
+      img.src = src; img.alt = ''; img.decoding = 'async';
       el.appendChild(img);
-      if (it.label) {
-        var lb = document.createElement('span');
-        lb.className = 'tile__lbl';
-        lb.textContent = it.label;
-        el.appendChild(lb);
-      }
       stage.appendChild(el);
       return { el: el, i: idx };
     });
@@ -82,7 +76,7 @@
       return a;
     });
 
-    var W, H, start = null, DUR = 3000; // 渦が回る時間（2026-09-17 Toshiさん指示：3.0秒。回り方は変えない）
+    var W, H, start = null, DUR = 3000; // 渦が回る時間（2026-09-17 Toshiさん指示：9.6秒→3.0秒。動き方は変えない）
     var size = function () { W = stage.offsetWidth; H = stage.offsetHeight; };
     size();
 
@@ -176,23 +170,21 @@
         var L = landing();
         nodes.forEach(function (n) {
           var phase = n.i / nodes.length;
-          var local = Math.max(0, Math.min((ease - phase * 0.5) / 0.5, 1)); // 1枚が見えている時間を長く
+          var local = Math.max(0, Math.min((ease - phase * 0.62) / 0.38, 1));
           if (local <= 0) { n.el.style.opacity = 0; return; }
-          var w0 = Math.min(110, L.fw * 0.7);
-          var w = w0 + local * (Math.max(L.fw * 0.85, w0) - w0);
+          var w = 46 + local * (L.fw - 46);
           var lp = 1 - Math.pow(1 - local, 1.28);
-          var op = (lp < 0.08 ? lp / 0.08 : 1) * (lp > 0.72 ? Math.max(0, 1 - (lp - 0.72) / 0.28) : 1);
-          var ang = lp * Math.PI * 2 * 1.1 + phase * Math.PI * 2; // 回り方は1.1周（2026-09-17 Toshiさん指示で固定）
+          var op = (lp < 0.08 ? lp / 0.08 : 1) * (lp > 0.72 ? Math.max(0, 1 - (lp - 0.72) / 0.28) : 1) * 0.94;
+          var ang = lp * Math.PI * 2 * 2.6 + phase * Math.PI * 2;
           var SPREAD = W > 900 ? 1.85 : 1.30;
           var OUT = 0.72, radK;
-          // 見出しの上を通らないよう、半径を大きめに保って周りを回す（2026-09-17）
-          if (lp < OUT) { radK = 1.05 - (lp / OUT) * 0.33; } else { var k = (lp - OUT) / (1 - OUT); radK = 0.72 + k * k * 1.3; }
+          if (lp < OUT) { radK = 1 - (lp / OUT) * 0.66; } else { var k = (lp - OUT) / (1 - OUT); radK = 0.34 + k * k * 1.75; }
           var rad = radK * Math.min(W, H) * 0.50;
           var x = Math.cos(ang) * rad * SPREAD;
           var y = Math.sin(ang) * rad * 0.60 - lp * H * 0.06;
-          var rot = (1 - lp) * 10 * (n.i % 2 ? 1 : -1);
+          var rot = (1 - lp) * 26 * (n.i % 2 ? 1 : -1);
           var outK = Math.max(0, (lp - OUT) / (1 - OUT));
-          n.el.style.filter = outK > 0 ? 'blur(' + (outK * 6).toFixed(1) + 'px)' : '';
+          n.el.style.filter = outK > 0 ? 'blur(' + (outK * 14).toFixed(1) + 'px)' : '';
           place(n.el, x, y, 1, rot, op, w);
         });
         finalEls.forEach(function (el, idx) {
