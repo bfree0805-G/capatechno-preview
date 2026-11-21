@@ -80,7 +80,7 @@ body.admin-bar .hd{inset-block-start:32px}
 .hd__grp--co{gap:2px}
 .hd__link{position:relative;text-decoration:none;line-height:1.55;padding:4px 14px;border-radius:999px;white-space:nowrap;transition:background .2s,color .2s}
 @media(max-width:719px){.hd__link{padding:3px 10px}}
-@media(max-width:400px){.hd__link{padding:3px 8px}.hd__nav{gap:5px 4px}.hd__name-ja{font-size:1rem}.hd__mark{block-size:38px}.hd__logo{gap:10px}.hd__cta{padding:6px 10px}}
+@media(max-width:400px){.hd__link{padding:3px 8px}.hd__nav{gap:5px 4px}.hd__name-ja{font-size:.98rem}.hd__mark{block-size:34px}.hd__logo{gap:8px}.hd__cta{padding:6px 9px}.hd__in{column-gap:8px}}
 .hd__grp--gap .hd__link{color:var(--cyan-strong)}
 .hd__grp--hyp .hd__link{color:var(--amber-strong)}
 .hd__grp--gap .hd__link+.hd__link::before{content:"";position:absolute;inset-inline-start:0;inset-block:22%;border-inline-start:1px solid rgba(14,124,138,.45)}
@@ -169,58 +169,222 @@ body.home .main{padding-block-start:0}
 .toc a{font-size:.88rem;font-weight:700;text-decoration:none;padding:7px 14px;border:1px solid var(--line-2);border-radius:999px;background:#fff;white-space:nowrap}
 .toc a:hover{border-color:var(--accent);color:var(--accent-strong)}
 
-/* ---------- ヒーロー（トップ・螺旋） ---------- */
-.hero{position:relative;min-block-size:100svh;overflow:hidden;display:grid;place-items:center}
-.hero__stage{position:absolute;inset:0;z-index:0}
-.tile{position:absolute;inset-block-start:50%;inset-inline-start:50%;transform-origin:center;will-change:transform,opacity;
-  border:1px solid var(--line-2);background:var(--graphite-2);overflow:hidden;box-shadow:var(--shadow-tile)}
-.tile img{inline-size:100%;block-size:100%;object-fit:cover}
-.tile__cap{position:absolute;inset-block-end:0;inset-inline:0;font-family:var(--mono);font-size:.86rem;letter-spacing:.05em;
-  color:#F2F5F7;background:linear-gradient(transparent,rgba(8,10,13,.82) 62%);padding:26px 10px 10px;text-align:center;
-  opacity:0;transition:opacity .45s .3s}
-.hero.is-settled .tile--final .tile__cap{opacity:1}
-@media(max-width:620px){.tile--final .cap__en{display:none}.tile__cap{font-size:.84rem;padding:22px 6px 8px}}
-.tile{border-radius:10px}
-/* 最終の2枚：枠を付けず、角丸＋やわらかい影＋小さな事業ラベル（2026-09-14 Toshiさん指摘「枠がみっともない」） */
-.tile--final{border:0;border-radius:22px;background:transparent;overflow:visible;box-shadow:none;text-decoration:none}
-.tile--final img{border-radius:22px;box-shadow:0 30px 60px -24px rgba(16,20,24,.42),0 8px 18px -10px rgba(16,20,24,.18)}
-.tile--final .tile__cap{display:none}
-.tile__chip{position:absolute;inset-block-start:14px;inset-inline-start:14px;font-family:var(--mono);font-size:.84rem;font-weight:700;letter-spacing:.05em;
-  color:#fff;padding:5px 12px;border-radius:999px;opacity:0;transition:opacity .45s .3s;box-shadow:0 4px 12px rgba(16,20,24,.2)}
-.tile--final.is-gap .tile__chip{background:var(--cyan-strong)}.tile--final.is-hyp .tile__chip{background:var(--amber-strong)}
-.hero.is-settled .tile__chip{opacity:1}
-.hero.is-settled .tile--final:hover img{box-shadow:0 36px 70px -24px rgba(16,20,24,.5),0 10px 22px -10px rgba(16,20,24,.22)}
-.hero__copy{position:relative;z-index:5;text-align:center;pointer-events:none;transition:transform 1.1s cubic-bezier(.16,.8,.24,1),opacity .8s}
-.hero__label{font-family:var(--mono);font-size:clamp(.86rem,1.2vw,1rem);font-weight:700;letter-spacing:.05em;color:var(--surgical-dim);margin:0 0 20px}
-.hero__t{font-size:clamp(1.9rem,5.4vw,4.6rem);font-weight:900;line-height:1.1;letter-spacing:-.035em;margin:0 0 18px;text-shadow:var(--t-shadow)}
-.hero__t .dim{color:#4A545F}.hero__t .cy{color:var(--cyan)}.hero__t .am{color:var(--amber)}
-.hero__lead{font-size:clamp(1rem,1.5vw,1.2rem);max-inline-size:32em;margin:0 auto;text-shadow:var(--l-shadow)}
-.hero__pick{position:absolute;inset-block-end:clamp(28px,6vh,64px);inset-inline:0;z-index:4;text-align:center;font-family:var(--mono);
-  font-size:.86rem;letter-spacing:.05em;color:var(--surgical-dim);opacity:0;transition:opacity .6s .3s}
-.hero.is-settled .hero__pick{opacity:1}
-.hero__top{position:absolute;z-index:4;inset-inline:0;inset-block-start:calc(var(--hd-h) + clamp(12px,2.4vh,26px));margin:0;padding:0 var(--pad);list-style:none;
-  display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px}
-.hero__top li{font-size:.86rem;font-weight:700;padding:5px 14px;border-radius:999px;background:rgba(255,255,255,.9);
-  box-shadow:inset 0 0 0 1px var(--line-2);color:var(--surgical-dim)}
-.hero__top li::before{content:"";display:inline-block;inline-size:7px;block-size:7px;border-radius:50%;background:var(--cyan);margin-inline-end:8px;vertical-align:.12em}
-.hero__top li+li::before{background:var(--amber)}
-.hero__bottom{position:absolute;z-index:4;inset-inline:0;inset-block-end:clamp(18px,3.6vh,40px);padding:0 var(--pad);text-align:center}
-.hero__bottom .hero__pick{position:static;margin:0 0 10px;opacity:1}
-.hero__go{display:flex;justify-content:center;gap:clamp(10px,2vw,22px)}
-.hero__btn{display:flex;flex-direction:column;align-items:flex-start;gap:0;min-inline-size:min(44vw,300px);padding:10px 20px 10px 18px;border-radius:14px;
-  text-decoration:none;background:#fff;box-shadow:inset 0 0 0 1px var(--line-2),0 8px 20px -12px rgba(16,20,24,.3);border-inline-start:5px solid;transition:transform .2s,box-shadow .2s;position:relative}
-.hero__btn::after{content:"→";position:absolute;inset-inline-end:16px;inset-block-start:50%;transform:translateY(-50%);font-weight:700}
-.hero__btn b{font-size:1.06rem;font-weight:800;line-height:1.3}
-.hero__btn span{font-size:.84rem;color:var(--surgical-dim);line-height:1.5;padding-inline-end:22px}
-.hero__btn--gap{border-color:var(--cyan)}.hero__btn--gap b,.hero__btn--gap::after{color:var(--cyan-strong)}
-.hero__btn--hyp{border-color:var(--amber)}.hero__btn--hyp b,.hero__btn--hyp::after{color:var(--amber-strong)}
-.hero__btn:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px var(--line-3),0 12px 26px -12px rgba(16,20,24,.36)}
-@media(max-width:560px) and (max-height:720px){.hero__top{display:none}.hero__bottom .hero__pick{display:none}}
-@media(max-width:560px){.hero__btn{min-inline-size:0;flex:1 1 0;padding:8px 10px 8px 12px}.hero__btn::after{display:none}.hero__btn span{padding-inline-end:0;font-size:.8rem}.hero__top li{font-size:.8rem;padding:4px 10px}}
-.hero__veil{position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:radial-gradient(ellipse 44% 25% at 50% 50%,var(--veil-copy) 0%,var(--veil-copy-2) 54%,transparent 100%);transition:opacity .45s}
-.hero.is-settled .hero__veil{opacity:0}
-.hero__finals{position:absolute;inset:0;z-index:2}
+/* ---------- ヒーロー（トップ・2026-09-27 作り直し） ----------
+   暗い「測定台」の上に製品の本物の写真（背景だけ切り抜き）。製品ごとの場面を下の並びで切り替える。
+   幕開け：2枚の板が閉じて髪の毛ほどの隙間ができ、薄いセンサーが入る → 板が開いて中が見える（CSSだけで動く。JSは数字と輪と切り替え）
+   ---------------------------------------------------------------- */
+.hx{--hx-bg:#0A0E13;--hx-ink:#F2F5F7;--hx-dim:#AEB9C3;--hx-line:rgba(255,255,255,.1);
+  --hx-cy:#4FCAD8;--hx-am:#F2A65A;--hx-bronze:#D39A52;--t0:1.5s;
+  position:relative;isolation:isolate;overflow:hidden;background:var(--hx-bg);color:var(--hx-ink);
+  min-block-size:max(660px,100svh);display:flex;flex-direction:column;padding-block-start:calc(var(--hd-h) + clamp(10px,2vh,22px))}
+.hx--seen{--t0:.05s}
+.hx b{background:none;color:inherit;padding:0}
+.hx__bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.hx__grid{position:absolute;inset:0;background:
+  linear-gradient(var(--hx-line) 1px,transparent 1px) 0 0/56px 56px,
+  linear-gradient(90deg,var(--hx-line) 1px,transparent 1px) 0 0/56px 56px;
+  opacity:.45;-webkit-mask:radial-gradient(ellipse 70% 60% at 70% 50%,#000 20%,transparent 75%);mask:radial-gradient(ellipse 70% 60% at 70% 50%,#000 20%,transparent 75%)}
+.hx__glow{position:absolute;inset:0;background:radial-gradient(ellipse 40% 50% at 72% 52%,rgba(79,202,216,.16),transparent 70%);transition:background 1s}
+.hx.is-hyp .hx__glow{background:radial-gradient(ellipse 40% 50% at 72% 45%,rgba(242,166,90,.2),transparent 70%)}
+
+/* 資格の帯 */
+.hx__badges{position:relative;z-index:3;display:flex;flex-wrap:wrap;gap:8px 10px;margin:0;padding:0 var(--pad);list-style:none;max-width:1500px;margin-inline:auto;inline-size:100%;
+  opacity:0;animation:hxUp .8s var(--t0) cubic-bezier(.2,.8,.2,1) forwards}
+.hx__badges li{font-size:.8rem;font-weight:700;letter-spacing:.02em;padding:5px 13px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:#DCE3E8}
+.hx__badges li::before{content:"";display:inline-block;inline-size:6px;block-size:6px;border-radius:50%;background:var(--hx-cy);margin-inline-end:8px;vertical-align:.14em}
+.hx__badges li+li::before{background:var(--hx-am)}
+
+/* 場面（同じ位置に重ねて切り替える） */
+.hx__scenes{position:relative;flex:1 1 auto;display:grid}
+.hx__scene{grid-area:1/1;display:flex;align-items:center;min-block-size:0}
+.hx.is-js .hx__scene:not(.is-on):not(.is-leave){display:none}
+/* JSが動かないときは場面を縦に並べ、切り替えの帯は出さない */
+.hx:not(.is-js) .hx__scene{grid-area:auto}
+.hx:not(.is-js) .hx__rail{display:none}
+.hx__in{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:clamp(16px,3vw,48px);inline-size:100%;padding-block:clamp(8px,2vh,24px)}
+.hx__copy{position:relative;z-index:3}
+.hx__kicker{display:flex;align-items:center;gap:12px;margin:0 0 clamp(14px,2vh,22px);font-family:var(--mono);font-size:clamp(.78rem,1vw,.9rem);font-weight:700;letter-spacing:.05em;color:var(--hx-cy)}
+.is-hyp .hx__kicker{color:var(--hx-am)}
+.hx__no{font-size:.95em;padding:2px 8px;border:1px solid currentColor;border-radius:3px;letter-spacing:.04em}
+.hx__copy{container-type:inline-size}
+/* 見出しは1行ずつ折り返さない（「、」だけが次の行に落ちるのを防ぐ）。1行12文字まで収まる大きさに自動で縮む */
+.hx__t{font-size:min(3.7rem,7.4cqi);font-weight:900;line-height:1.14;letter-spacing:-.035em;margin:0 0 clamp(14px,2.2vh,24px);color:#fff;white-space:nowrap}
+.hx__lead{font-size:clamp(1rem,1.25vw,1.16rem);line-height:1.9;color:var(--hx-dim);max-inline-size:31em;margin:0 0 clamp(18px,2.8vh,30px)}
+.hx__facts{display:flex;flex-wrap:wrap;gap:clamp(14px,2.4vw,36px);margin:0 0 clamp(22px,3.4vh,36px)}
+.hx__facts div{display:flex;flex-direction:column-reverse;padding-inline-start:14px;border-inline-start:2px solid rgba(79,202,216,.55)}
+.is-hyp .hx__facts div{border-inline-start-color:rgba(242,166,90,.6)}
+.hx__facts dt{font-size:.8rem;color:var(--hx-dim);line-height:1.5}
+.hx__facts dd{margin:0;display:flex;align-items:baseline;gap:4px;line-height:1.1}
+.hx__facts dd b{font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:800;letter-spacing:-.02em;color:#fff;font-variant-numeric:tabular-nums}
+.hx__facts small{font-size:.9rem;font-weight:700;color:var(--hx-dim)}
+.hx__acts{display:flex;flex-wrap:wrap;gap:12px}
+
+/* 文字が上下に割れて、あいだに薄いセンサーが通るボタン（GAPMANの「隙間」をボタンで見せる） */
+.gbtn{--c:var(--hx-cy);--ink:#061216;position:relative;display:inline-flex;align-items:center;justify-content:center;min-block-size:54px;padding:0 30px;
+  border-radius:4px;background:var(--c);color:var(--ink);text-decoration:none;font-weight:800;font-size:1rem;letter-spacing:.02em;overflow:hidden;
+  transition:box-shadow .3s,transform .3s}
+.gbtn--hyp{--c:var(--hx-am);--ink:#1C0F02}
+.gbtn--etc{--c:#C9D2DA;--ink:#0A0E13}
+.gbtn--ghost{--c:transparent;--ink:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.gbtn span{position:relative;color:transparent;white-space:nowrap}
+.gbtn span::before,.gbtn span::after{content:attr(data-t);position:absolute;inset:0;color:var(--ink);transition:transform .38s cubic-bezier(.3,1.4,.4,1)}
+.gbtn span::before{clip-path:inset(0 0 50% 0)}
+.gbtn span::after{clip-path:inset(50% 0 0 0)}
+.gbtn i{position:absolute;inset-inline:0;inset-block-start:50%;block-size:2px;margin-block-start:-1px;transform:scaleX(0);transform-origin:left;
+  background:linear-gradient(90deg,transparent,var(--hx-bronze) 20%,#FBE0B0 50%,var(--hx-bronze) 80%,transparent);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.gbtn:hover span::before,.gbtn:focus-visible span::before{transform:translateY(-4px)}
+.gbtn:hover span::after,.gbtn:focus-visible span::after{transform:translateY(4px)}
+.gbtn:hover i,.gbtn:focus-visible i{transform:scaleX(1)}
+.gbtn:hover{box-shadow:0 14px 34px -12px var(--c)}
+.gbtn--ghost:hover{box-shadow:inset 0 0 0 1px #fff}
+.gbtn:active{transform:translateY(1px)}
+
+/* 右側の舞台：製品＋12業種の輪／マイクロ波の波紋 */
+.hx__stage{position:relative;block-size:clamp(380px,calc(100svh - var(--hd-h) - 190px),640px);display:grid;place-items:center}
+.hx__scene--gap .hx__prod{filter:brightness(1.1) contrast(1.05) drop-shadow(0 30px 40px rgba(0,0,0,.55)) drop-shadow(0 0 1px rgba(255,255,255,.3))}
+.hx__prod{position:absolute;z-index:2;inset-block-start:3%;inset-inline-start:50%;translate:-50% 0;block-size:94%;inline-size:auto;max-inline-size:100%;object-fit:contain;
+  filter:drop-shadow(0 30px 40px rgba(0,0,0,.55)) drop-shadow(0 0 1px rgba(255,255,255,.25))}
+.hx__scene--wave .hx__prod{inset-block-start:50%;translate:-50% -50%;block-size:min(88%,640px)} /* 2026-09-27 Higgsfieldの高画質化2k（Toshiさん決定）に差し替えたので大きく出せる */ /* ハイパーサーミアは元の写真が小さいので、元の大きさより大きくしない */
+.hx__stage::after{content:"";position:absolute;z-index:0;inset-inline:22%;inset-block-end:1%;block-size:40px;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(79,202,216,.22),transparent);filter:blur(4px)}
+.is-hyp .hx__stage::after{background:radial-gradient(closest-side,rgba(242,166,90,.22),transparent)}
+.hx__callout{position:absolute;z-index:3;inset-inline-start:calc(50% + 34px);inset-block-start:17%;margin:0;display:flex;flex-direction:column;gap:2px;
+  padding:8px 12px 9px 14px;border-inline-start:1px solid var(--hx-bronze);background:rgba(10,14,19,.66);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  opacity:0;animation:hxUp .8s calc(var(--t0) + .9s) cubic-bezier(.2,.8,.2,1) forwards}
+.hx__callout::before{content:"";position:absolute;inset-inline-end:100%;inset-block-start:50%;inline-size:30px;border-block-start:1px dashed var(--hx-bronze)}
+.hx__callout::after{content:"";position:absolute;inset-inline-start:-36px;inset-block-start:calc(50% - 3px);inline-size:7px;block-size:7px;border-radius:50%;background:var(--hx-bronze);box-shadow:0 0 0 4px rgba(211,154,82,.25)}
+.hx__callout b{font-size:1.2rem;font-weight:800;color:#F7D7A6;line-height:1.2}
+.hx__callout span{font-size:.76rem;color:#D9C4A6;line-height:1.4}
+.hx__funnel{position:absolute;inset:0;z-index:0;inline-size:100%;block-size:100%;overflow:visible;pointer-events:none;opacity:0;animation:hxIn 1.2s calc(var(--t0) + .2s) forwards}
+.hx__funnel ellipse{fill:none;stroke:rgba(79,202,216,.28);stroke-width:1;stroke-dasharray:1.2 3.2;animation:hxDash 16s linear infinite}
+.hx__funnel ellipse:nth-child(even){animation-direction:reverse;stroke:rgba(79,202,216,.18)}
+@keyframes hxDash{to{stroke-dashoffset:-240}}
+.hx__orbit{position:absolute;inset:0;z-index:1;margin:0;padding:0;list-style:none}
+.hx__chip{position:absolute;inset-block-start:0;inset-inline-start:0;inline-size:var(--cw,168px);will-change:transform,opacity}
+.hx__chip a{display:block;text-decoration:none;color:#fff;border-radius:8px;overflow:hidden;background:#111820;box-shadow:0 12px 30px -10px rgba(0,0,0,.7);outline-offset:2px}
+.hx__chip img{inline-size:100%;aspect-ratio:3/2;object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.8);transition:filter .35s}
+.hx__chip span{display:flex;align-items:baseline;gap:7px;padding:6px 10px 7px;font-size:.78rem;font-weight:700;line-height:1.35;background:linear-gradient(180deg,#141C25,#0E141B)}
+.hx__chip span b{color:var(--hx-cy);font-size:.82rem}
+.hx__chip a:hover img,.hx__chip a:focus-visible img{filter:none}
+.hx__chip a:hover,.hx__chip a:focus-visible{box-shadow:0 0 0 2px var(--hx-cy),0 16px 40px -10px rgba(0,0,0,.8)}
+/* JSが動くまで（動かないとき）は業種の写真を出さない（製品と重ならないように） */
+.hx__orbit:not(.is-live){display:none}
+
+
+
+/* 下の並び：製品の切り替え（2〜4件で等分） */
+.hx__rail{position:relative;z-index:4;border-block-start:1px solid rgba(255,255,255,.12);background:rgba(10,14,19,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  opacity:0;animation:hxUp .8s calc(var(--t0) + .35s) cubic-bezier(.2,.8,.2,1) forwards}
+.hx__rail-in{display:flex;align-items:stretch;gap:clamp(12px,2vw,28px)}
+.hx__rail-k{flex:none;align-self:center;margin:0;font-size:.78rem;font-weight:700;letter-spacing:.05em;color:var(--hx-dim)}
+.hx__tabs{flex:1 1 auto;display:grid;grid-template-columns:repeat(var(--n,2),minmax(0,1fr))}
+.hx__tab{position:relative;display:flex;align-items:center;gap:14px;padding:16px clamp(12px,1.6vw,22px);border:0;border-inline-start:1px solid rgba(255,255,255,.1);
+  background:transparent;color:var(--hx-dim);font:inherit;text-align:start;cursor:pointer;transition:background .3s,color .3s}
+.hx__tab:hover{background:rgba(255,255,255,.04);color:#fff}
+.hx__tab[aria-selected="true"]{color:#fff;background:rgba(255,255,255,.06)}
+.hx__tab-no{font-size:1.3rem;font-weight:800;line-height:1;opacity:.55}
+.hx__tab[aria-selected="true"] .hx__tab-no{opacity:1;color:var(--hx-cy)}
+.hx__tab.is-hyp[aria-selected="true"] .hx__tab-no{color:var(--hx-am)}
+.hx__tab-tx{display:flex;flex-direction:column;min-inline-size:0;word-break:keep-all}
+.hx__tab-tx b{font-size:1.02rem;font-weight:800;line-height:1.3}
+.hx__tab-tx small{font-size:.78rem;line-height:1.45;opacity:.85}
+.hx__tab-bar{position:absolute;inset-inline:0;inset-block-start:-1px;block-size:2px;background:var(--hx-cy);transform:scaleX(0);transform-origin:left}
+.hx__tab.is-hyp .hx__tab-bar{background:var(--hx-am)}
+.hx__tab[aria-selected="true"] .hx__tab-bar{transform:scaleX(1)}
+/* 自動切り替えの残り時間はJSが bar の幅で示す */
+.hx__still{flex:none;align-self:center;display:inline-flex;align-items:center;gap:8px;min-block-size:40px;padding:0 14px;border:1px solid rgba(255,255,255,.22);border-radius:999px;
+  background:transparent;color:var(--hx-dim);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:color .2s,border-color .2s}
+.hx__still:hover{color:#fff;border-color:rgba(255,255,255,.5)}
+.hx__still i{position:relative;inline-size:10px;block-size:12px;border-inline:3px solid currentColor}
+.hx__still[aria-pressed="true"] i{border:0;border-block:6px solid transparent;border-inline-start:10px solid currentColor;inline-size:0;block-size:0}
+.hx:not(.is-js) .hx__still{display:none}
+/* 止めたときは、CSSの動き（点線・波紋・光）もまとめて止める */
+.hx--still .hx__funnel ellipse{animation-play-state:paused}
+
+/* 切り替え：上から走査線が降りて、新しい場面が現れる */
+.hx__scene.is-enter{animation:hxWipe .9s cubic-bezier(.6,.05,.25,1) both}
+.hx__scene.is-enter::after{content:"";position:absolute;inset-inline:0;block-size:2px;inset-block-start:0;z-index:9;pointer-events:none;
+  background:linear-gradient(90deg,transparent,var(--hx-cy) 15%,#fff 50%,var(--hx-cy) 85%,transparent);box-shadow:0 0 18px var(--hx-cy);animation:hxScan .9s cubic-bezier(.6,.05,.25,1) both}
+.hx__scene.is-hyp.is-enter::after{background:linear-gradient(90deg,transparent,var(--hx-am) 15%,#fff 50%,var(--hx-am) 85%,transparent);box-shadow:0 0 18px var(--hx-am)}
+.hx__scene{position:relative}
+.hx__scene.is-leave{animation:hxOut .6s ease both}
+@keyframes hxWipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes hxScan{from{inset-block-start:0;opacity:1}90%{opacity:1}to{inset-block-start:100%;opacity:0}}
+@keyframes hxOut{to{opacity:0;transform:translateY(10px)}}
+
+/* 最初の場面の出方（幕が開いたあと、順に） */
+.hx__scene.is-first .hx__kicker,.hx__scene.is-first .hx__t,.hx__scene.is-first .hx__lead,.hx__scene.is-first .hx__facts,.hx__scene.is-first .hx__acts{opacity:0;animation:hxUp .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hx__scene.is-first .hx__kicker{animation-delay:calc(var(--t0) + .05s)}
+.hx__scene.is-first .hx__t{animation-delay:calc(var(--t0) + .12s)}
+.hx__scene.is-first .hx__lead{animation-delay:calc(var(--t0) + .24s)}
+.hx__scene.is-first .hx__facts{animation-delay:calc(var(--t0) + .34s)}
+.hx__scene.is-first .hx__acts{animation-delay:calc(var(--t0) + .44s)}
+.hx__scene.is-first .hx__prod{opacity:0;animation:hxRise 1.2s calc(var(--t0) - .2s) cubic-bezier(.16,.8,.2,1) forwards}
+@keyframes hxUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes hxRise{from{opacity:0;transform:translateY(40px) scale(.96)}to{opacity:1;transform:none}}
+
+/* 幕開け：板が閉じて髪の毛ほどの隙間 → 薄いセンサーが入る → 数字 → 板が開く */
+.hx__intro{position:absolute;inset:0;z-index:20;pointer-events:none}
+.hx--seen .hx__intro{display:none}
+.hx__plate{position:absolute;inset-inline:0;block-size:50%;background:
+  repeating-linear-gradient(180deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px),
+  linear-gradient(180deg,#1A2129,#0D1217)}
+.hx__plate--t{inset-block-start:0;box-shadow:0 1px 0 rgba(255,255,255,.18);animation:hxPlateT 1s 1.25s cubic-bezier(.7,0,.2,1) forwards}
+.hx__plate--b{inset-block-end:0;background:repeating-linear-gradient(180deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px),linear-gradient(0deg,#1A2129,#0D1217);
+  box-shadow:0 -1px 0 rgba(255,255,255,.18);animation:hxPlateB 1s 1.25s cubic-bezier(.7,0,.2,1) forwards}
+.hx__seam{position:absolute;inset-inline:0;inset-block-start:50%;block-size:1px;background:var(--hx-cy);box-shadow:0 0 12px 1px var(--hx-cy);
+  transform:scaleX(0);animation:hxSeam .7s .1s cubic-bezier(.6,0,.2,1) forwards,hxFade .4s 1.3s forwards}
+.hx__wand{position:absolute;inset-block-start:50%;inset-inline-start:0;inline-size:min(52vw,640px);block-size:6px;margin-block-start:-3px;
+  transform:translateX(-105%);filter:drop-shadow(0 0 6px rgba(211,154,82,.8));animation:hxWand .8s .35s cubic-bezier(.2,.8,.2,1) forwards,hxFade .4s 1.3s forwards}
+.hx__read{position:absolute;inset-inline-end:var(--pad);inset-block-start:calc(50% + 14px);margin:0;display:flex;align-items:baseline;gap:8px;
+  font-family:var(--mono);color:var(--hx-dim);font-size:.82rem;letter-spacing:.05em;opacity:0;animation:hxIn .3s .45s forwards,hxFade .4s 1.3s forwards}
+.hx__read b{font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;letter-spacing:0;font-variant-numeric:tabular-nums}
+@keyframes hxSeam{to{transform:scaleX(1)}}
+@keyframes hxWand{to{transform:translateX(calc(50vw - 50%))}}
+@keyframes hxIn{to{opacity:1}}
+@keyframes hxFade{to{opacity:0}}
+@keyframes hxPlateT{to{transform:translateY(-101%)}}
+@keyframes hxPlateB{to{transform:translateY(101%)}}
+
+/* スマホ・タブレット：縦に積む（写真は必ず見える） */
+@media(max-width:959px){
+  .hx{min-block-size:0;padding-block-start:calc(var(--hd-h) + 10px)}
+  .hx__in{grid-template-columns:minmax(0,1fr);gap:4px}
+  .hx__copy{display:contents}
+  /* 見出し→短い説明→ボタン→製品→数字の順（ボタンを製品写真より先に：レビュー指摘） */
+  .hx__kicker{order:1;margin-block-end:8px}.hx__t{order:2}.hx__lead{order:3}.hx__acts{order:4}.hx__stage{order:5}.hx__facts{order:6}
+  .hx__stage{block-size:clamp(230px,32svh,310px);margin-block:0 10px}
+  .hx__in{display:flex;flex-direction:column;align-items:stretch}
+  .hx__acts{margin-block-end:6px}.hx__facts{margin-block-end:22px}
+}
+@media(max-width:560px){
+  .hx__callout{inset-inline-start:calc(50% + 24px);inset-block-start:12%;padding:5px 9px 6px 10px}
+  .hx__callout::before{inline-size:20px}.hx__callout::after{inset-inline-start:-26px}
+  .hx__callout b{font-size:1rem}.hx__callout span{font-size:.68rem}
+  .hx__badges li.is-hyp{display:none}
+  .hx.is-hyp .hx__badges li.is-gap{display:none}.hx.is-hyp .hx__badges li.is-hyp{display:inline-block}
+  .hx__still{min-block-size:36px;padding:0 10px;font-size:.72rem}.hx__still-t{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .hx__badges li{font-size:.74rem;padding:4px 11px}
+  .hx__t{font-size:min(7.3vw,2.3rem);white-space:normal;line-break:strict}
+  .hx__lead{font-size:.95rem;line-height:1.75;margin-block-end:14px}
+  .hx__facts{gap:14px 18px;margin-block-end:20px}
+  .hx__facts dd b{font-size:1.45rem}
+  .hx__acts{gap:10px}
+  .hx__acts .gbtn{flex:1 1 auto}
+  .gbtn{min-block-size:50px;padding:0 16px;font-size:.95rem}
+  .hx__rail-k{display:none}
+  .hx__tab{gap:10px;padding:12px 10px}
+  .hx__tab-no{font-size:1rem}
+  .hx__tab-tx b{font-size:.92rem}
+  .hx__tab-tx small{font-size:.7rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .hx__intro{display:none}
+  .hx__badges,.hx__rail,.hx__scene.is-first *{animation:none!important;opacity:1!important}
+  .hx__funnel ellipse{animation:none}
+  .hx__funnel{animation:none;opacity:1}
+  .hx__scene.is-enter,.hx__scene.is-enter::after,.hx__scene.is-leave{animation:none}
+}
 
 /* ---------- トップ：2事業 ---------- */
 .duo{display:grid;gap:clamp(20px,3vw,40px);margin-block-start:clamp(36px,5vh,64px)}
@@ -232,6 +396,8 @@ body.home .main{padding-block-start:0}
 .duo__media{display:block;background:var(--graphite-2);aspect-ratio:3/4;overflow:hidden}
 @media(max-width:619px){.duo__media{aspect-ratio:16/10}}
 .duo__media img{inline-size:100%;block-size:100%;object-fit:cover;transition:transform .6s}
+.duo__media:has(img[src*="/hero/"]){background:radial-gradient(ellipse 70% 55% at 50% 60%,#1B2631,#0A0E13);display:grid;place-items:center;padding:6% 0}
+.duo__media img[src*="/hero/"]{object-fit:contain;block-size:100%;inline-size:auto;max-inline-size:90%;filter:drop-shadow(0 18px 24px rgba(0,0,0,.5))}
 .duo__i:hover .duo__media img{transform:scale(1.04)}
 .duo__body{padding:clamp(22px,3vw,36px)}
 .duo__k{font-family:var(--mono);font-size:.84rem;font-weight:700;letter-spacing:.05em;margin:0 0 12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
@@ -576,13 +742,44 @@ body.home .main{padding-block-start:0}
 .steps__n{font-family:var(--mono);color:var(--amber-strong);font-weight:700;letter-spacing:.05em}
 .steps__t{font-size:1.2rem;font-weight:800;margin:4px 0}
 .steps__d{margin:0;color:var(--surgical-dim);font-size:.94rem}
-.heat{margin:0;color:var(--amber);background:#fff;border:1px solid var(--line-2);aspect-ratio:1;max-inline-size:440px;justify-self:center;inline-size:100%}
-.heat svg{inline-size:100%;block-size:100%}
-.heat__r{fill:none;stroke:currentColor;stroke-width:2;transform-origin:200px 200px;animation:heat 4.2s ease-out infinite}
-.heat__r--2{animation-delay:1.4s}.heat__r--3{animation-delay:2.8s}
-.heat__core{fill:currentColor}
-.heat__axis{stroke:var(--line-3);stroke-dasharray:4 6}
-.heat__lbl{font-family:var(--mono);font-size:12px;letter-spacing:.05em;fill:var(--steel)}
+/* ハイパーサーミア：「伝える → 捉える → 制御する」の動く図（2026-09-27）12秒で1周。--cy がその長さ */
+.heat-wrap{justify-self:center;inline-size:100%;max-inline-size:540px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.heat{--cy:12s;margin:0;inline-size:100%;color:#F2A65A;background:
+  linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px) 0 0/28px 28px,
+  linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px) 0 0/28px 28px,#0A0E13;border-radius:6px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(0,0,0,.6)}
+.heat svg{display:block;inline-size:100%;block-size:auto}
+.heat__box{fill:#1B232C;stroke:#F2A65A;stroke-width:1.5}
+.heat__led{fill:#F2A65A;animation:heatLed var(--cy) linear infinite}
+.heat__slot{fill:#33414D}
+.heat__w{fill:none;stroke:#F2A65A;stroke-width:1.6;transform-origin:88px 170px;opacity:0;animation:heatWave var(--cy) cubic-bezier(.2,.6,.3,1) infinite}
+.heat__w--2{animation-delay:.9s}.heat__w--3{animation-delay:1.8s}
+.heat__c{fill:#F2A65A;opacity:.07;animation:heatCell var(--cy) ease-in-out infinite;animation-delay:var(--d)}
+.heat__base{stroke:rgba(255,255,255,.25)}
+.heat__b{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(.15);animation:heatBar var(--cy) ease-in-out infinite;animation-delay:calc(var(--o)*.12s)}
+.heat__stage{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);border-block-start:1px solid rgba(255,255,255,.14)}
+.heat__stage li{padding:10px 8px 11px;text-align:center;font-weight:800;font-size:.95rem;color:#7C8894;position:relative;animation:heatStage var(--cy) linear infinite}
+.heat__stage li span{display:block;font-size:.72rem;letter-spacing:.05em;opacity:.8}
+.heat__stage li:nth-child(2){animation-delay:calc(var(--cy)/3)}.heat__stage li:nth-child(3){animation-delay:calc(var(--cy)/3*2)}
+@keyframes heatWave{0%{transform:scale(.06);opacity:0}4%{opacity:.85}30%{opacity:.5}36%,100%{transform:scale(1);opacity:0}}
+@keyframes heatLed{0%,36%{opacity:1}40%,100%{opacity:.35}}
+@keyframes heatCell{0%,30%{opacity:.07}46%,66%{opacity:calc(.12 + var(--k)*.85)}80%{opacity:calc(.1 + var(--k)*.42)}96%,100%{opacity:.07}}
+@keyframes heatBar{0%,60%{transform:scaleY(.15)}70%{transform:scaleY(calc(var(--h) + .3))}78%{transform:scaleY(calc(var(--h) - .15))}88%,96%{transform:scaleY(var(--h))}100%{transform:scaleY(.15)}}
+@keyframes heatStage{0%{color:#F6BC80}33%{color:#F6BC80}34%,100%{color:#7C8894}}
+/* 「技術の考え方」の3つの箱も、図と同じ拍で光る */
+.appr .steps__i{animation:heatStep var(--cy,12s) linear infinite}
+.appr .steps__i:nth-child(2){animation-delay:4s}.appr .steps__i:nth-child(3){animation-delay:8s}
+@keyframes heatStep{0%{box-shadow:inset 0 3px 0 var(--amber)}33%{box-shadow:inset 0 3px 0 var(--amber)}34%,100%{box-shadow:inset 0 3px 0 transparent}}
+.heat__still{display:inline-flex;align-items:center;gap:8px;min-block-size:40px;padding:0 14px;border:1px solid var(--line-3);border-radius:999px;background:#fff;color:var(--surgical-dim);font:inherit;font-size:.82rem;font-weight:700;cursor:pointer}
+.heat__still:hover{color:var(--surgical);border-color:var(--surgical)}
+.heat__still i{inline-size:10px;block-size:12px;border-inline:3px solid currentColor}
+.heat__still[aria-pressed="true"] i{border:0;border-block:6px solid transparent;border-inline-start:10px solid currentColor;inline-size:0;block-size:0}
+.appr.is-still .heat *,.appr.is-still .steps__i{animation-play-state:paused}
+.appr.is-off .heat *,.appr.is-off .steps__i{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){
+  .heat *,.appr .steps__i{animation:none!important}
+  .heat__c{opacity:calc(.1 + var(--k)*.6)}.heat__b{transform:scaleY(var(--h))}.heat__w--1{opacity:.4;transform:scale(.5)}.heat__w--2{opacity:.25;transform:scale(.75)}
+  .heat__stage li{color:#F6BC80}.heat__still{display:none}
+}
 @keyframes heat{0%{transform:scale(.4);opacity:.9}100%{transform:scale(4.2);opacity:0}}
 .cmp2{display:grid;gap:14px;margin-block-start:clamp(22px,3vh,36px)}
 @media(min-width:760px){.cmp2{grid-template-columns:1fr 1fr}}
@@ -682,3 +879,140 @@ body.home .main{padding-block-start:0}
   .mq__row+.mq__row{display:none}
   .mq__g[aria-hidden]{display:none}
 }
+
+/* ---------- 下層ページの上部も、トップのヒーローに準じて暗い「測定台」に（2026-09-27） ----------
+   色の変数をこの中だけ暗い台用に置き換える（本文の白地はそのまま）。下の縁に、トップの幕開けと同じ「隙間の線」が走る */
+.phero,.phead,.ihero,body:not(.home) .crumbs{
+  --graphite:#0A0E13;--graphite-2:#121920;--graphite-3:#1B232C;
+  --surgical:#F2F5F7;--surgical-dim:#AEB9C3;--steel:#93A0AB;
+  --cyan:#4FCAD8;--cyan-strong:#86E0EA;--cyan-soft:rgba(79,202,216,.12);
+  --amber:#F2A65A;--amber-strong:#F6BC80;--amber-soft:rgba(242,166,90,.14);
+  --line:rgba(255,255,255,.1);--line-2:rgba(255,255,255,.16);--line-3:rgba(255,255,255,.34);
+  --mark:rgba(79,202,216,.28);--accent:var(--cyan);--accent-strong:var(--cyan-strong);
+  color:var(--surgical);background-color:#0A0E13}
+body:not(.home) .crumbs{box-shadow:0 0 0 100vmax #0A0E13;clip-path:inset(0 -100vmax);padding-block:12px 4px}
+.phero,.phead,.ihero{isolation:isolate;overflow:hidden;border-block-end:0;
+  background:
+    radial-gradient(ellipse 45% 70% at 82% 40%,rgba(79,202,216,.14),transparent 70%),
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,#0A0E13}
+.phero--hyp,.phead--hyp{background:
+    radial-gradient(ellipse 45% 70% at 82% 40%,rgba(242,166,90,.16),transparent 70%),
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/56px 56px,#0A0E13}
+.phero::before,.phead::before,.ihero::before{display:none}
+.phero::after,.phead::after,.ihero::after{content:"";position:absolute;inset-inline:0;inset-block-end:0;block-size:1px;z-index:1;
+  background:linear-gradient(90deg,transparent,var(--cyan) 20%,#fff 50%,var(--cyan) 80%,transparent);box-shadow:0 0 12px var(--cyan);
+  transform:scaleX(0);animation:hxSeam 1.1s .15s cubic-bezier(.6,0,.2,1) forwards}
+.phero--hyp::after,.phead--hyp::after{background:linear-gradient(90deg,transparent,var(--amber) 20%,#fff 50%,var(--amber) 80%,transparent);box-shadow:0 0 12px var(--amber)}
+.phero__copy>*,.phead .wrap>*,.ihero__copy>*{opacity:0;animation:hxUp .8s cubic-bezier(.2,.8,.2,1) forwards}
+.phero__copy>:nth-child(2),.phead .wrap>:nth-child(2),.ihero__copy>:nth-child(2){animation-delay:.08s}
+.phero__copy>:nth-child(3),.phead .wrap>:nth-child(3),.ihero__copy>:nth-child(3){animation-delay:.16s}
+.phero__copy>:nth-child(n+4),.phead .wrap>:nth-child(n+4),.ihero__copy>:nth-child(n+4){animation-delay:.24s}
+.phero__t,.phead__t,.ihero__t{color:#fff}
+.phero .toc{padding-block-end:clamp(22px,3vh,34px)}
+.phero .toc a,.phead .toc a{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.18);color:#E6ECF0}
+.phero .toc a:hover{border-color:var(--accent);color:#fff}
+.phero .btn--p,.phead .btn--p,.ihero .btn--p{color:#061216}
+.phero .btn--p:hover,.ihero .btn--p:hover{background:#86E0EA}
+.phero .btn--hyp{background:var(--amber);color:#1C0F02}.phero .btn--hyp:hover{background:#F6BC80}
+.phero .btn--g,.phead .btn--g,.ihero .btn--g{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.phero .btn--g:hover,.ihero .btn--g:hover{border-color:#fff;color:#fff}
+.phero .lic__k{background:var(--amber);color:#1C0F02}
+.phero .yt{box-shadow:0 24px 60px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.08)}
+.phero__banner{background:linear-gradient(180deg,#7b8c99 0%,#46525c 55%,#0A0E13 100%)}
+/* ハイパーサーミア：写真は背景を切り抜いた本物（画素はそのまま・元の大きさ以上にしない）＋マイクロ波の波紋 */
+.phero__media{position:relative;background:transparent;border:0;overflow:visible;display:grid;place-items:center;aspect-ratio:auto;max-block-size:none}
+.phero__media img[src*="/hero/"]{position:relative;z-index:1;inline-size:auto;block-size:auto;max-block-size:640px;max-inline-size:100%;object-fit:contain;filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+
+.ihero .gapfig{color:var(--cyan)}
+@media(prefers-reduced-motion:reduce){
+  .phero::after,.phead::after,.ihero::after{animation:none;transform:none}
+  .phero__copy>*,.phead .wrap>*,.ihero__copy>*{animation:none;opacity:1}
+}
+
+/* GAPMANページ：業種別の先頭のエンジン組立のイメージ映像（2026-09-27） */
+.engv{position:relative;margin:clamp(20px,3vh,32px) 0 clamp(24px,4vh,40px);border-radius:8px;overflow:hidden;background:#0A0E13;box-shadow:0 24px 50px -28px rgba(16,20,24,.5)}
+.engv__v{display:block;inline-size:100%;aspect-ratio:16/9;object-fit:cover}
+.engv__over{position:absolute;inset-inline:0;inset-block-end:0;margin:0;padding:clamp(28px,6vw,60px) clamp(16px,3vw,28px) clamp(14px,2.4vw,20px);background:linear-gradient(transparent,rgba(10,14,19,.8))}
+.engv__over b{display:block;background:none;padding:0;color:#fff;font-size:clamp(1.2rem,2.4vw,1.8rem);font-weight:800;letter-spacing:-.01em}
+.engv__over span{font-size:.76rem;color:#9AA6B2}
+.engv__text{display:grid;gap:clamp(16px,2.4vw,32px);align-items:center;margin:calc(-1 * clamp(12px,2vh,20px)) 0 clamp(28px,4vh,44px)}
+@media(min-width:900px){.engv__text{grid-template-columns:1.25fr 1fr}}
+.engv__lead{margin:0;font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.95;color:var(--surgical-dim)}
+.engv__key{margin:0;padding:clamp(18px,2.4vw,26px) clamp(18px,2.4vw,28px);background:#fff;border:1px solid var(--line-2);border-inline-start:4px solid var(--cyan);border-radius:4px;display:flex;flex-direction:column;gap:4px}
+.engv__key span{font-size:.92rem;color:var(--surgical-dim);font-weight:700}
+.engv__key strong{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:900;color:var(--cyan-strong);line-height:1.2;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.engv__btn{position:absolute;inset-block-start:12px;inset-inline-end:12px;min-block-size:36px;padding:0 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;background:rgba(10,14,19,.55);color:#fff;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+.engv__btn:hover{background:rgba(10,14,19,.8)}
+@media(max-width:560px){.engv__over{padding:18px 12px 10px}}
+
+/* エンジン映像の最後に浮かぶロゴ（ページの上で重ねる。動画ファイルは変えない） */
+.engv::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 60% 60% at 50% 45%,rgba(10,14,19,.15),rgba(10,14,19,.55));opacity:0;transition:opacity 1s ease}
+.engv.is-logo::after{opacity:1}
+.engv__logo{position:absolute;z-index:2;inset-inline-start:50%;inset-block-start:44%;inline-size:min(34%,300px);padding:clamp(10px,1.6vw,18px) clamp(14px,2.2vw,26px);
+  background:rgba(255,255,255,.94);border-radius:10px;box-shadow:0 20px 50px -12px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.6);
+  transform:translate(-50%,-50%) translateY(14px) scale(.94);opacity:0;filter:blur(6px);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.8,.2,1),filter .9s ease;pointer-events:none}
+.engv__logo img{display:block;inline-size:100%;block-size:auto}
+.engv.is-logo .engv__logo{opacity:1;transform:translate(-50%,-50%);filter:none}
+.engv__over,.engv__btn{z-index:3}
+@media(prefers-reduced-motion:reduce){.engv__logo,.engv::after{transition:none}}
+@media(max-width:560px){.engv__logo{inline-size:48%;inset-block-start:40%}}
+
+/* 13インチのノートPC（画面の高さ 約700〜800px）でも、映像と文章が1画面に収まるよう横に並べる（2026-09-27 Toshiさん指摘） */
+@media(min-width:1000px){
+  .engv-row{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(20px,2.6vw,40px);align-items:center;margin:clamp(20px,3vh,32px) 0 clamp(28px,4vh,44px)}
+  .engv-row .engv{margin:0}
+  .engv-row .engv__v{max-block-size:min(62vh,540px)}
+  .engv-row .engv__text{margin:0;grid-template-columns:1fr;gap:clamp(14px,2vh,22px)}
+  .engv-row .engv__lead{font-size:clamp(.95rem,1.1vw,1.06rem);line-height:1.85}
+}
+
+/* ハイパーサーミア：パネルの中心から広がる光のもや（もやだけの動画を「光」として重ねる＝黒い所は消える）2026-09-27 */
+/* 2026-09-27修正：共通の「img,video{max-width:100%}」で600→480pxに縮み、光が左上へずれていた → 上限を外す */
+.hhz{position:absolute;z-index:3;inset-inline-start:0;inset-block-start:0;inline-size:0;block-size:auto;max-width:none;max-block-size:none;mix-blend-mode:screen;pointer-events:none;opacity:0;transition:opacity .8s ease}
+.hhz.is-ready{opacity:1}
+/* 光が右へ広がる分を見せるため、装置を左へ寄せる（2026-09-27 Toshiさん指示） */
+.phero__media:has(.hhz){justify-items:start}
+.hx__scene--wave .hx__prod:has(+ .hhz){inset-inline-start:36%}
+/* 42.5℃：光が向かう先（右下の空き）に大きく置く。機器情報を公開する設定のときだけ出る */
+.hx__scene--wave:has(.hx__temp) .hx__prod{inset-inline-start:19%}
+/* 床の影も装置に合わせて左へ */
+.hx__scene--wave:has(.hhz) .hx__stage::after{inset-inline:16% 44%}
+.hx__scene--wave:has(.hx__temp) .hx__stage::after{inset-inline:-1% 61%}
+.hx__temp{position:absolute;z-index:4;inset-inline-end:0;inset-block-end:9%;margin:0;display:flex;flex-direction:column;align-items:flex-end;text-align:end;pointer-events:none}
+.hx__temp b{font-size:clamp(3.4rem,6.4vw,6rem);font-weight:800;line-height:1;letter-spacing:-.04em;
+  background:linear-gradient(180deg,#FFF3DC 0%,#F2B46A 55%,#C9782F 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 18px rgba(242,166,90,.35))}
+.hx__temp b small{font-size:.42em;margin-inline-start:.08em;vertical-align:.95em;letter-spacing:0}
+.hx__temp span{margin-block-start:10px;padding-block-start:10px;border-block-start:1px solid rgba(242,180,106,.45);font-size:clamp(.82rem,1.1vw,.98rem);font-weight:700;color:#F3DDBD}
+@media(max-width:600px){.hx__scene--wave:has(.hx__temp) .hx__prod{inset-inline-start:34%}.hx__temp{inset-block-end:6%}.hx__temp span{font-size:.72rem}}
+@media(prefers-reduced-motion:reduce){.hhz{display:none}}
+
+/* GAPMANページ「仕組み」の映像（2026-09-27：平面の隙間の図から差し替え） */
+.gapv{position:relative;margin:0;border-radius:8px;overflow:hidden;background:#0A0E13;box-shadow:0 24px 50px -28px rgba(16,20,24,.5)}
+.gapv__v{display:block;inline-size:100%;aspect-ratio:832/480;object-fit:cover}
+.gapv__cap{margin:0;padding:12px 16px 14px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;background:#0A0E13}
+.gapv__cap b{color:#5DE3F0;font-size:1rem;font-weight:800}
+.gapv__cap span{font-size:.72rem;color:#9AA6B2}
+.gapv__btn{position:absolute;z-index:2;inset-block-start:12px;inset-inline-end:12px;min-block-size:36px;padding:0 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;background:rgba(10,14,19,.55);color:#fff;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}
+.gapv__btn:hover{background:rgba(10,14,19,.8)}
+
+/* 上へ戻るボタン（2026-09-27）：右下に固定。下へ動かしたときだけ出る */
+.totop{position:fixed;z-index:60;inset-inline-end:max(16px,env(safe-area-inset-right));inset-block-end:max(16px,env(safe-area-inset-bottom));inline-size:56px;block-size:56px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:0;border:1px solid rgba(255,255,255,.35);background:rgba(16,20,24,.86);color:#fff;cursor:pointer;
+  box-shadow:0 10px 24px -10px rgba(0,0,0,.55);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s ease,transform .25s ease,background .2s}
+.totop span{font-family:var(--mono);font-size:.6rem;font-weight:700;letter-spacing:.08em;line-height:1}
+.totop.is-on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{background:rgba(16,20,24,1)}
+.totop:focus-visible{outline:3px solid #5DE3F0;outline-offset:3px}
+@media(max-width:560px){.totop{inline-size:48px;block-size:48px}}
+@media(prefers-reduced-motion:reduce){.totop{transition:none}}
+@media print{.totop{display:none}}
+
+/* ハイパーサーミア「照射のイメージ」動画（2026-09-27・機器情報を公開する設定のときだけ出る） */
+.hvid{margin:clamp(18px,3vh,28px) 0 0;max-inline-size:960px}
+.hvid__v{display:block;inline-size:100%;aspect-ratio:16/9;background:#0A0E13;border-radius:8px;box-shadow:0 24px 50px -28px rgba(16,20,24,.5)}
+.hvid__v::cue{font-size:1.05rem;line-height:1.5;background:rgba(10,14,19,.72);color:#fff}
+.hvid__cap{margin:10px 0 0;font-size:.82rem;color:var(--surgical-dim);line-height:1.7}
+.hvid__snd{display:inline-block;margin-inline-end:8px;padding:1px 8px;border-radius:999px;background:var(--amber-strong,#C9782F);color:#fff;font-size:.72rem;font-weight:700}

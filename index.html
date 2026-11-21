@@ -52,8 +52,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel='stylesheet' id='ct-main-css' href='/capatechno-preview/wp-content/themes/capatechno/assets/css/main.css?ver=0.1.0.1789643399' media='all' />
-<meta name="generator" content="WordPress 7.1" />
+<link rel='stylesheet' id='ct-main-css' href='/capatechno-preview/wp-content/themes/capatechno/assets/css/main.css?ver=0.1.0.1790494303' media='all' />
+<meta name="generator" content="WordPress 7.1.5" />
 <link rel="canonical" href="/capatechno-preview/" />
 <style>:root{--pv-h:34px}html{margin-block-start:var(--pv-h)}.pv-banner{position:fixed;inset-block-start:0;inset-inline:0;z-index:200;background:#101418;color:#fff;font-size:14px;line-height:1.6;text-align:center;padding:6px 12px}.pv-banner b{color:#fff;background:none}.hd{inset-block-start:var(--pv-h)}.dsw{margin-block-start:var(--pv-h)}@media(max-width:719px){.dsw{margin-block-start:var(--hd-h)}}.hero{min-block-size:calc(100svh - var(--pv-h))}</style><script>(function(){var f=function(){var b=document.querySelector(".pv-banner");if(b){document.documentElement.style.setProperty("--pv-h",b.offsetHeight+"px");}};document.addEventListener("DOMContentLoaded",f);addEventListener("load",f);addEventListener("resize",f);})();</script>
 </head>
@@ -95,31 +95,137 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <main id="main" class="main">
 
-<!-- ================= ヒーロー：螺旋（brand-v2 の承認版を移植） ================= -->
-<section class="hero" id="hero"
-  data-assets="/capatechno-preview/wp-content/themes/capatechno/assets/img/"
-  data-gapman="/capatechno-preview/gapman/"
-  data-hyper="/capatechno-preview/hyperthermia/"
-  data-photo-gap="/capatechno-preview/wp-content/themes/capatechno/assets/img/product/gapman-hero.jpg"
-  data-photo-hyp="/capatechno-preview/wp-content/themes/capatechno/assets/img/product/hyperthermia-hero.jpg">
-  <div class="hero__stage" id="stage" aria-hidden="true"></div>
-  <div class="hero__veil" aria-hidden="true"></div>
-  <div class="hero__finals" id="finalStage"></div>
-  <ul class="hero__top">
-    <li>米国CAPACITEC社 日本国内総代理店</li><li>高度管理医療機器等販売業 許可</li>  </ul>
-  <div class="wrap hero__copy">
-    <p class="hero__label">TWO DOMAINS ／ ONE PRINCIPLE</p>
-    <h1 class="hero__t">
-      <span class="dim">見えない</span><span class="cy">隙間</span><span class="dim">と、</span><br>
-      <span class="dim">見えない</span><span class="am">熱</span><span class="dim">を。</span>
-    </h1>
-    <p class="hero__lead">キャパテクノは、肉眼で捉えられない物理量を数値に変える技術を扱っています。</p>
+<!-- ================= ヒーロー（2026-09-27 作り直し）=================
+  製品ごとの「場面」を下の並びで切り替える。製品は inc/data-front.php の lineup（2〜4件）。
+  GAPMAN：隙間が閉じてセンサーが入る幕開け → 12業種の写真が製品のまわりを回る輪（旧・竜巻の狙いを引き継ぐ）
+  ハイパーサーミア：マイクロ波の波紋。写真はどちらも本物の画素のまま背景だけ切り抜いたもの
+-->
+<section class="hx" id="hero" data-count="2" aria-roledescription="製品の切り替え" aria-label="取扱製品">
+  <script>(function(h){h.classList.add('is-js');try{if(sessionStorage.getItem('ctHxSeen')){h.classList.add('hx--seen')}}catch(e){}})(document.getElementById('hero'));</script>
+  <div class="hx__bg" aria-hidden="true"><i class="hx__grid"></i><i class="hx__glow"></i></div>
+
+  <div class="hx__intro" aria-hidden="true">
+    <i class="hx__plate hx__plate--t"></i><i class="hx__plate hx__plate--b"></i>
+    <i class="hx__seam"></i>
+    <svg class="hx__wand" viewBox="0 0 400 12" preserveAspectRatio="none"><defs><linearGradient id="hxBronze" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F3C98B"/><stop offset=".45" stop-color="#C98B3E"/><stop offset="1" stop-color="#7A4B18"/></linearGradient></defs><rect x="0" y="3" width="400" height="6" rx="3" fill="url(#hxBronze)"/><path d="M8 6H392" stroke="#FCE3B8" stroke-opacity=".7" stroke-width=".7" stroke-dasharray="14 6"/></svg>
+    <p class="hx__read"><span>GAP</span><b class="mono" data-to="0.312">0.000</b><span>mm</span></p>
   </div>
-  <div class="hero__bottom">
-    <p class="hero__pick">2つの領域から選んでください</p>
-    <div class="hero__go">
-      <a class="hero__btn hero__btn--gap" href="/capatechno-preview/gapman/"><b>GAPMAN</b><span>非接触ギャップ測定器</span></a>
-      <a class="hero__btn hero__btn--hyp" href="/capatechno-preview/hyperthermia/"><b>ハイパーサーミア</b><span>マイクロ波によるエネルギー制御</span></a>
+
+  <ul class="hx__badges">
+    <li class="is-gap">米国CAPACITEC社 日本国内総代理店</li><li class="is-hyp">高度管理医療機器等販売業 許可</li>  </ul>
+
+  <div class="hx__scenes">
+        <div class="hx__scene hx__scene--gap is-gap is-on is-first" id="hx-scene-0" role="tabpanel" aria-labelledby="hx-tab-0">
+      <div class="wrap hx__in">
+        <div class="hx__copy">
+          <p class="hx__kicker"><span class="hx__no mono">01</span>NON-CONTACT GAP MEASUREMENT</p>
+          <h1 class="hx__t">ゲージが入らない隙間も、<br>
+触れずに測る。</h1>          <p class="hx__lead">厚さ約0.1mm、髪の毛1本ほどの薄いセンサーを差し込むだけ。誰が測っても同じ値が、データとして残ります。</p>
+                    <dl class="hx__facts">
+                          <div><dt>センサーの厚さ（薄膜型）</dt><dd><b class="mono">0.1</b><small>mm</small></dd></div>
+                          <div><dt>分解能</dt><dd><b class="mono">0.254</b><small>μm</small></dd></div>
+                          <div><dt>での活用</dt><dd><b class="mono">12</b><small>業種</small></dd></div>
+                      </dl>
+                    <div class="hx__acts">
+            <a class="gbtn gbtn--gap" href="/capatechno-preview/gapman/"><span data-t="GAPMANを詳しく見る">GAPMANを詳しく見る</span><i aria-hidden="true"></i></a>
+            <a class="gbtn gbtn--ghost" href="/capatechno-preview/gapman/industries/"><span data-t="12業種の活用例">12業種の活用例</span><i aria-hidden="true"></i></a>          </div>
+        </div>
+        <div class="hx__stage">
+                                  <ul class="hx__orbit" aria-hidden="true">
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/aerospace/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-aerospace.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">A</b>航空宇宙</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/automotive/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-automotive.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">B</b>自動車</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/semiconductor/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-semiconductor.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">C</b>半導体</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/film/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-film.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">D</b>フィルム・コンバーティング</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/printing/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-printing.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">E</b>複写機・印刷機</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/storage/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-storage.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">F</b>コンピュータ周辺・記録装置</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/power/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-power.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">G</b>電力・発電</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/nuclear/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-nuclear.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">H</b>原子力</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/metal-glass/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-metal-glass.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">I</b>鉄鋼・アルミ・ガラス</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/materials-testing/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-materials-testing.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">J</b>材料試験</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/research/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-research.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">K</b>素粒子物理・研究機関</span>
+                </a></li>
+                              <li class="hx__chip"><a href="/capatechno-preview/gapman/industries/machinery/" tabindex="-1">
+                  <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/ind-machinery.webp" alt="" width="180" height="120" decoding="async">
+                  <span><b class="mono">L</b>産業機械・モーター</span>
+                </a></li>
+                          </ul>
+            <p class="hx__callout"><b class="mono">約0.1mm</b><span>センサーの厚さ。髪の毛1本ほど</span></p>                                <img class="hx__prod" src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/gapman-cut.webp" alt="GAPMAN本体と、薄いフィルム状のセンサー" decoding="async" fetchpriority="high">
+                              </div>
+      </div>
+    </div>
+        <div class="hx__scene hx__scene--wave is-hyp" id="hx-scene-1" role="tabpanel" aria-labelledby="hx-tab-1">
+      <div class="wrap hx__in">
+        <div class="hx__copy">
+          <p class="hx__kicker"><span class="hx__no mono">02</span>MICROWAVE ENERGY CONTROL</p>
+          <h2 class="hx__t">見えない熱を、<br>
+扱う技術。</h2>          <p class="hx__lead">マイクロ波によるエネルギーの伝達と、熱の分布を扱う技術分野です。医療機関・研究機関からのご相談を、専用の窓口で承ります。</p>
+                    <dl class="hx__facts">
+                          <div><dt>高度管理医療機器等販売業</dt><dd><b class="mono">許可</b></dd></div>
+                          <div><dt>GAPMANとは別の相談窓口</dt><dd><b class="mono">専用</b></dd></div>
+                      </dl>
+                    <div class="hx__acts">
+            <a class="gbtn gbtn--hyp" href="/capatechno-preview/hyperthermia/"><span data-t="ハイパーサーミアを詳しく見る">ハイパーサーミアを詳しく見る</span><i aria-hidden="true"></i></a>
+                      </div>
+        </div>
+        <div class="hx__stage">
+                                    <p class="hx__temp"><b class="mono">42.5<small>℃</small></b><span>照射した部分を、この温度まで加温</span></p>
+                                            <img class="hx__prod" src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/hyperthermia-cut.webp" alt="マイクロ波照射装置" decoding="async" loading="lazy">
+                                    <video class="hhz" src="/capatechno-preview/wp-content/themes/capatechno/assets/video/hyperthermia-haze.mp4" poster="/capatechno-preview/wp-content/themes/capatechno/assets/video/hyperthermia-haze-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+                              </div>
+      </div>
+    </div>
+      </div>
+
+  <div class="hx__rail">
+    <div class="wrap hx__rail-in">
+      <p class="hx__rail-k mono">取扱製品</p>
+      <div class="hx__tabs" role="tablist" aria-label="取扱製品" style="--n:2">
+                  <button type="button" class="hx__tab is-gap" id="hx-tab-0" role="tab" aria-controls="hx-scene-0" aria-selected="true">
+            <span class="hx__tab-no mono">01</span>
+            <span class="hx__tab-tx"><b>GAPMAN</b><small>非接触ギャップ測定器</small></span>
+            <i class="hx__tab-bar" aria-hidden="true"></i>
+          </button>
+                  <button type="button" class="hx__tab is-hyp" id="hx-tab-1" role="tab" aria-controls="hx-scene-1" aria-selected="false" tabindex="-1">
+            <span class="hx__tab-no mono">02</span>
+            <span class="hx__tab-tx"><b>ハイパーサーミア</b><small>マイクロ波によるエネルギー制御</small></span>
+            <i class="hx__tab-bar" aria-hidden="true"></i>
+          </button>
+              </div>
+      <button type="button" class="hx__still" aria-pressed="false" data-off="動きを止める" data-on="動きを再開">
+        <i aria-hidden="true"></i><span class="hx__still-t">動きを止める</span>
+      </button>
     </div>
   </div>
 </section>
@@ -127,14 +233,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!-- ================= 2つの事業 ================= -->
 <section class="sec sec--intro">
   <div class="wrap">
-    <p class="sec__eyebrow">TWO DOMAINS ／ ONE PRINCIPLE</p>
+    <p class="sec__eyebrow">PRODUCTS</p>
     <h2 class="sec__t">対象は違っても、やっていることは同じです。</h2>
     <p class="sec__d">隙間の幅も、熱の広がりも、そのままでは扱えません。数値に変えて初めて、比較でき、記録でき、制御できるようになります。当社が扱う2つの領域は、この一点で繋がっています。</p>
 
     <div class="duo">
               <article class="duo__i duo__i--gap">
           <a class="duo__media" href="/capatechno-preview/gapman/" tabindex="-1" aria-hidden="true">
-            <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/product/gapman-front.jpg" alt="" loading="lazy" width="1050" height="1400">
+            <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/gapman-cut.webp" alt="" loading="lazy" width="208" height="1254">
           </a>
           <div class="duo__body">
             <p class="duo__k"><span>01</span>GAPMAN ／ PRECISION MEASUREMENT</p>
@@ -150,7 +256,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
         </article>
               <article class="duo__i duo__i--hyp">
           <a class="duo__media" href="/capatechno-preview/hyperthermia/" tabindex="-1" aria-hidden="true">
-            <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/product/hyperthermia-hero.jpg" alt="" loading="lazy" width="492" height="656">
+            <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/hyperthermia-cut.webp" alt="" loading="lazy" width="681" height="1400">
           </a>
           <div class="duo__body">
             <p class="duo__k"><span>02</span>HYPERTHERMIA ／ THERMAL &amp; ELECTROMAGNETIC</p>
@@ -177,8 +283,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       <a class="more" href="/capatechno-preview/news/">お知らせ一覧</a>
     </div>
           <ul class="news">
-                  <li><a class="news__i" href="/capatechno-preview/2026/09/17/renewal/"><time datetime="2026-09-17T21:34:16+09:00">2026.09.17</time><span>ホームページを新しくしました（試作）</span></a></li>
-                  <li><a class="news__i" href="/capatechno-preview/2026/09/17/hello-world/"><time datetime="2026-09-17T12:34:10+09:00">2026.09.17</time><span>Hello world!</span></a></li>
+                  <li><a class="news__i" href="/capatechno-preview/2026/11/21/renewal/"><time datetime="2026-11-21T11:18:33+09:00">2026.11.21</time><span>ホームページを新しくしました（試作）</span></a></li>
               </ul>
       </div>
 </section>
@@ -261,11 +366,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <small>&copy; 2026 CapaTechno LLC</small>
   </div>
 </footer>
+<button type="button" class="totop" aria-label="ページの先頭へ戻る" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5l-7 7m7-7l7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>TOP</span></button>
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/capatechno/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script data-wp-strategy="defer" defer id="ct-roi-js" src="/capatechno-preview/wp-content/themes/capatechno/assets/js/roi.js?ver=0.1.0.1789388726"></script>
-<script data-wp-strategy="defer" defer id="ct-main-js" src="/capatechno-preview/wp-content/themes/capatechno/assets/js/main.js?ver=0.1.0.1789650472"></script>
+<script data-wp-strategy="defer" defer id="ct-roi-js" src="/capatechno-preview/wp-content/themes/capatechno/assets/js/roi.js?ver=0.1.0.1789692558"></script>
+<script data-wp-strategy="defer" defer id="ct-main-js" src="/capatechno-preview/wp-content/themes/capatechno/assets/js/main.js?ver=0.1.0.1790492521"></script>
 <script>document.addEventListener("submit",function(e){e.preventDefault();alert("確認用の試作サイトのため、送信はできません。");},true);</script>
 </body>
 </html>

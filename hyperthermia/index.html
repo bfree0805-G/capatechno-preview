@@ -51,8 +51,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<link rel='stylesheet' id='ct-main-css' href='/capatechno-preview/wp-content/themes/capatechno/assets/css/main.css?ver=0.1.0.1789643399' media='all' />
-<meta name="generator" content="WordPress 7.1" />
+<link rel='stylesheet' id='ct-main-css' href='/capatechno-preview/wp-content/themes/capatechno/assets/css/main.css?ver=0.1.0.1790494303' media='all' />
+<meta name="generator" content="WordPress 7.1.5" />
 <link rel="canonical" href="/capatechno-preview/hyperthermia/" />
 <style>:root{--pv-h:34px}html{margin-block-start:var(--pv-h)}.pv-banner{position:fixed;inset-block-start:0;inset-inline:0;z-index:200;background:#101418;color:#fff;font-size:14px;line-height:1.6;text-align:center;padding:6px 12px}.pv-banner b{color:#fff;background:none}.hd{inset-block-start:var(--pv-h)}.dsw{margin-block-start:var(--pv-h)}@media(max-width:719px){.dsw{margin-block-start:var(--hd-h)}}.hero{min-block-size:calc(100svh - var(--pv-h))}</style><script>(function(){var f=function(){var b=document.querySelector(".pv-banner");if(b){document.documentElement.style.setProperty("--pv-h",b.offsetHeight+"px");}};document.addEventListener("DOMContentLoaded",f);addEventListener("load",f);addEventListener("resize",f);})();</script>
 </head>
@@ -117,16 +117,17 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
       </div>
     </div>
     <figure class="phero__media">
-      <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/product/hyperthermia-hero.jpg" alt="マイクロ波照射装置" width="492" height="656">
+      <img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/hero/hyperthermia-cut.webp" alt="マイクロ波照射装置" width="610" height="1400">
+            <video class="hhz" src="/capatechno-preview/wp-content/themes/capatechno/assets/video/hyperthermia-haze.mp4" poster="/capatechno-preview/wp-content/themes/capatechno/assets/video/hyperthermia-haze-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
     </figure>
   </div>
   <nav class="toc wrap" aria-label="このページの目次">
-    <a href="#approach">技術の考え方</a><a href="#method">加温の方式</a><a href="#for">ご相談いただける方</a><a href="#flow">ご相談の流れ</a><a href="#notice">掲載について</a>
+    <a href="#approach">技術の考え方</a><a href="#method">加温の方式</a><a href="#image">照射のイメージ</a><a href="#for">ご相談いただける方</a><a href="#flow">ご相談の流れ</a><a href="#notice">掲載について</a>
   </nav>
 </section>
 
 <!-- ================= 技術の考え方 ================= -->
-<section class="sec" id="approach">
+<section class="sec appr" id="approach">
   <div class="wrap co">
     <div>
       <p class="sec__eyebrow">APPROACH</p>
@@ -138,18 +139,98 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                   <li class="steps__i"><span class="steps__n">03</span><p class="steps__t">制御する</p><p class="steps__d">照射の条件を管理する</p></li>
               </ol>
     </div>
-    <figure class="heat" aria-hidden="true">
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <circle class="heat__r heat__r--1" cx="200" cy="200" r="40"/>
-        <circle class="heat__r heat__r--2" cx="200" cy="200" r="40"/>
-        <circle class="heat__r heat__r--3" cx="200" cy="200" r="40"/>
-        <circle class="heat__core" cx="200" cy="200" r="16"/>
-        <line class="heat__axis" x1="20" y1="200" x2="380" y2="200"/>
-        <line class="heat__axis" x1="200" y1="20" x2="200" y2="380"/>
-        <text class="heat__lbl" x="212" y="36">ENERGY</text>
-        <text class="heat__lbl" x="300" y="192">DISTRIBUTION</text>
-      </svg>
-    </figure>
+        <div class="heat-wrap">
+      <figure class="heat" aria-hidden="true">
+        <svg viewBox="0 0 520 340" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="heatClip"><rect x="88" y="0" width="432" height="340"/></clipPath>
+            <linearGradient id="heatBar" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#F6BC80"/><stop offset="1" stop-color="#B4722A"/></linearGradient>
+          </defs>
+          <!-- 01 伝える：発信部から波が広がる -->
+          <g class="heat__emit">
+            <rect x="22" y="128" width="62" height="84" rx="10" class="heat__box"/>
+            <circle cx="53" cy="158" r="7" class="heat__led"/>
+            <rect x="38" y="180" width="30" height="4" rx="2" class="heat__slot"/><rect x="38" y="190" width="30" height="4" rx="2" class="heat__slot"/>
+          </g>
+          <g clip-path="url(#heatClip)" class="heat__waves">
+            <circle class="heat__w heat__w--1" cx="88" cy="170" r="230"/>
+            <circle class="heat__w heat__w--2" cx="88" cy="170" r="230"/>
+            <circle class="heat__w heat__w--3" cx="88" cy="170" r="230"/>
+          </g>
+          <!-- 02 捉える：熱の分布が浮かび上がる（8列×7行） -->
+          <g class="heat__cells">
+                          <rect class="heat__c" x="250" y="65" width="27" height="27" rx="3" style="--d:0.78s;--k:0.14"/>
+                          <rect class="heat__c" x="280" y="65" width="27" height="27" rx="3" style="--d:0.67s;--k:0.14"/>
+                          <rect class="heat__c" x="310" y="65" width="27" height="27" rx="3" style="--d:0.6s;--k:0.19"/>
+                          <rect class="heat__c" x="340" y="65" width="27" height="27" rx="3" style="--d:0.56s;--k:0.24"/>
+                          <rect class="heat__c" x="370" y="65" width="27" height="27" rx="3" style="--d:0.56s;--k:0.24"/>
+                          <rect class="heat__c" x="400" y="65" width="27" height="27" rx="3" style="--d:0.61s;--k:0.17"/>
+                          <rect class="heat__c" x="430" y="65" width="27" height="27" rx="3" style="--d:0.69s;--k:0.14"/>
+                          <rect class="heat__c" x="460" y="65" width="27" height="27" rx="3" style="--d:0.8s;--k:0.14"/>
+                          <rect class="heat__c" x="250" y="95" width="27" height="27" rx="3" style="--d:0.66s;--k:0.14"/>
+                          <rect class="heat__c" x="280" y="95" width="27" height="27" rx="3" style="--d:0.53s;--k:0.28"/>
+                          <rect class="heat__c" x="310" y="95" width="27" height="27" rx="3" style="--d:0.43s;--k:0.41"/>
+                          <rect class="heat__c" x="340" y="95" width="27" height="27" rx="3" style="--d:0.37s;--k:0.49"/>
+                          <rect class="heat__c" x="370" y="95" width="27" height="27" rx="3" style="--d:0.38s;--k:0.48"/>
+                          <rect class="heat__c" x="400" y="95" width="27" height="27" rx="3" style="--d:0.45s;--k:0.39"/>
+                          <rect class="heat__c" x="430" y="95" width="27" height="27" rx="3" style="--d:0.56s;--k:0.25"/>
+                          <rect class="heat__c" x="460" y="95" width="27" height="27" rx="3" style="--d:0.68s;--k:0.14"/>
+                          <rect class="heat__c" x="250" y="125" width="27" height="27" rx="3" style="--d:0.57s;--k:0.22"/>
+                          <rect class="heat__c" x="280" y="125" width="27" height="27" rx="3" style="--d:0.43s;--k:0.42"/>
+                          <rect class="heat__c" x="310" y="125" width="27" height="27" rx="3" style="--d:0.29s;--k:0.61"/>
+                          <rect class="heat__c" x="340" y="125" width="27" height="27" rx="3" style="--d:0.19s;--k:0.74"/>
+                          <rect class="heat__c" x="370" y="125" width="27" height="27" rx="3" style="--d:0.21s;--k:0.72"/>
+                          <rect class="heat__c" x="400" y="125" width="27" height="27" rx="3" style="--d:0.32s;--k:0.57"/>
+                          <rect class="heat__c" x="430" y="125" width="27" height="27" rx="3" style="--d:0.45s;--k:0.38"/>
+                          <rect class="heat__c" x="460" y="125" width="27" height="27" rx="3" style="--d:0.6s;--k:0.18"/>
+                          <rect class="heat__c" x="250" y="155" width="27" height="27" rx="3" style="--d:0.54s;--k:0.26"/>
+                          <rect class="heat__c" x="280" y="155" width="27" height="27" rx="3" style="--d:0.38s;--k:0.48"/>
+                          <rect class="heat__c" x="310" y="155" width="27" height="27" rx="3" style="--d:0.22s;--k:0.7"/>
+                          <rect class="heat__c" x="340" y="155" width="27" height="27" rx="3" style="--d:0.06s;--k:0.91"/>
+                          <rect class="heat__c" x="370" y="155" width="27" height="27" rx="3" style="--d:0.1s;--k:0.87"/>
+                          <rect class="heat__c" x="400" y="155" width="27" height="27" rx="3" style="--d:0.26s;--k:0.65"/>
+                          <rect class="heat__c" x="430" y="155" width="27" height="27" rx="3" style="--d:0.42s;--k:0.43"/>
+                          <rect class="heat__c" x="460" y="155" width="27" height="27" rx="3" style="--d:0.58s;--k:0.22"/>
+                          <rect class="heat__c" x="250" y="185" width="27" height="27" rx="3" style="--d:0.57s;--k:0.22"/>
+                          <rect class="heat__c" x="280" y="185" width="27" height="27" rx="3" style="--d:0.43s;--k:0.42"/>
+                          <rect class="heat__c" x="310" y="185" width="27" height="27" rx="3" style="--d:0.29s;--k:0.61"/>
+                          <rect class="heat__c" x="340" y="185" width="27" height="27" rx="3" style="--d:0.19s;--k:0.74"/>
+                          <rect class="heat__c" x="370" y="185" width="27" height="27" rx="3" style="--d:0.21s;--k:0.72"/>
+                          <rect class="heat__c" x="400" y="185" width="27" height="27" rx="3" style="--d:0.32s;--k:0.57"/>
+                          <rect class="heat__c" x="430" y="185" width="27" height="27" rx="3" style="--d:0.45s;--k:0.38"/>
+                          <rect class="heat__c" x="460" y="185" width="27" height="27" rx="3" style="--d:0.6s;--k:0.18"/>
+                          <rect class="heat__c" x="250" y="215" width="27" height="27" rx="3" style="--d:0.66s;--k:0.14"/>
+                          <rect class="heat__c" x="280" y="215" width="27" height="27" rx="3" style="--d:0.53s;--k:0.28"/>
+                          <rect class="heat__c" x="310" y="215" width="27" height="27" rx="3" style="--d:0.43s;--k:0.41"/>
+                          <rect class="heat__c" x="340" y="215" width="27" height="27" rx="3" style="--d:0.37s;--k:0.49"/>
+                          <rect class="heat__c" x="370" y="215" width="27" height="27" rx="3" style="--d:0.38s;--k:0.48"/>
+                          <rect class="heat__c" x="400" y="215" width="27" height="27" rx="3" style="--d:0.45s;--k:0.39"/>
+                          <rect class="heat__c" x="430" y="215" width="27" height="27" rx="3" style="--d:0.56s;--k:0.25"/>
+                          <rect class="heat__c" x="460" y="215" width="27" height="27" rx="3" style="--d:0.68s;--k:0.14"/>
+                          <rect class="heat__c" x="250" y="245" width="27" height="27" rx="3" style="--d:0.78s;--k:0.14"/>
+                          <rect class="heat__c" x="280" y="245" width="27" height="27" rx="3" style="--d:0.67s;--k:0.14"/>
+                          <rect class="heat__c" x="310" y="245" width="27" height="27" rx="3" style="--d:0.6s;--k:0.19"/>
+                          <rect class="heat__c" x="340" y="245" width="27" height="27" rx="3" style="--d:0.56s;--k:0.24"/>
+                          <rect class="heat__c" x="370" y="245" width="27" height="27" rx="3" style="--d:0.56s;--k:0.24"/>
+                          <rect class="heat__c" x="400" y="245" width="27" height="27" rx="3" style="--d:0.61s;--k:0.17"/>
+                          <rect class="heat__c" x="430" y="245" width="27" height="27" rx="3" style="--d:0.69s;--k:0.14"/>
+                          <rect class="heat__c" x="460" y="245" width="27" height="27" rx="3" style="--d:0.8s;--k:0.14"/>
+                      </g>
+          <!-- 03 制御する：出力の条件を管理する（棒が上下して落ち着く） -->
+          <g class="heat__ctl">
+            <line x1="22" y1="312" x2="206" y2="312" class="heat__base"/>
+                          <rect class="heat__b" x="26" y="240" width="24" height="70" rx="3" fill="url(#heatBar)" style="--h:0.55;--o:0"/>
+                          <rect class="heat__b" x="64" y="240" width="24" height="70" rx="3" fill="url(#heatBar)" style="--h:0.85;--o:1"/>
+                          <rect class="heat__b" x="102" y="240" width="24" height="70" rx="3" fill="url(#heatBar)" style="--h:0.4;--o:2"/>
+                          <rect class="heat__b" x="140" y="240" width="24" height="70" rx="3" fill="url(#heatBar)" style="--h:0.7;--o:3"/>
+                          <rect class="heat__b" x="178" y="240" width="24" height="70" rx="3" fill="url(#heatBar)" style="--h:0.62;--o:4"/>
+                      </g>
+        </svg>
+        <ol class="heat__stage">
+          <li><span class="mono">01</span>伝える</li><li><span class="mono">02</span>捉える</li><li><span class="mono">03</span>制御する</li>        </ol>
+      </figure>
+      <button type="button" class="heat__still" aria-pressed="false" data-off="動きを止める" data-on="動きを再開"><i aria-hidden="true"></i><span class="heat__still-t">動きを止める</span></button>
+    </div>
   </div>
 </section>
 
@@ -174,6 +255,38 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   </div>
 </section>
 
+<!-- ================= 照射のイメージ（動画・音声あり）：設定でONのときだけ =================
+     2026-09-27 Toshiさん指示。型式（CT-01S・CT-01D）と装置が映るため、機器情報と同じく承認番号の確認後に出す。
+     置き場所＝「加温の方式（マイクロ波）」の説明の直後＝抽象→方式→照射の流れ→機器情報、と具体的になっていく順。
+     音声が入っているので自動再生はしない（押して再生）。字幕つき（音を出せない人も内容が分かる） -->
+<section class="sec hvid-sec" id="image">
+  <div class="wrap">
+    <p class="sec__eyebrow">IMAGE ／ 照射のイメージ</p>
+    <h2 class="sec__t">照射の前・照射中・照射のあと。</h2>
+    <p class="sec__d">お腹と背中の両側から温める流れを、血流の模式図で表したイメージ映像です。</p>
+    <figure class="hvid">
+      <video class="hvid__v" controls playsinline preload="none" poster="/capatechno-preview/wp-content/themes/capatechno/assets/video/hyperthermia-bloodflow-poster.jpg" aria-describedby="hvid-note">
+        <source src="/capatechno-preview/wp-content/themes/capatechno/assets/video/hyperthermia-bloodflow-720p.mp4" type="video/mp4">
+        <track kind="captions" srclang="ja" label="日本語" src="/capatechno-preview/wp-content/themes/capatechno/assets/video/hyperthermia-bloodflow.ja.vtt" default>
+      </video>
+      <figcaption class="hvid__cap" id="hvid-note"><span class="hvid__snd">音声が流れます</span>約38秒・字幕つき。再生ボタンを押すと始まります。血管・血流の動きはイメージで、効果を示すものではありません。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ================= 機器情報（設定でONのときだけ） ================= -->
+<section class="sec" id="device">
+  <div class="wrap co">
+    <figure class="media"><img src="/capatechno-preview/wp-content/themes/capatechno/assets/img/product/hyperthermia-unit.jpg" alt="マイクロ波照射装置 CT-01D" loading="lazy"></figure>
+    <div>
+      <p class="sec__eyebrow">DEVICE ／ 医療関係者の方へ</p>
+      <h2 class="sec__t">マイクロ波照射装置 CT-01D</h2>
+      <ul class="chk">
+        <li>垂直方向の広い可動域（665〜1065mm）</li><li>水平方向の可動（オプション）</li><li>コリメータによる照射領域の限定</li><li>Windowsによるプログラミングに対応</li><li>手持ちの非常停止ボタン</li><li>多段階の出力設定</li><li>レーザーポインタによる照射位置の確認</li>      </ul>
+      <p class="src">出典：社内資料「マイクロ波ハイパーサーミア」。承認・認証番号：（公開前に記入）</p>
+    </div>
+  </div>
+</section>
 
 <!-- ================= ご相談いただける方 ================= -->
 <section class="sec" id="for">
@@ -212,8 +325,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <p class="sec__eyebrow">NOTICE</p>
     <h2 class="sec__t sec__t--s">このページの掲載内容について</h2>
     <ul class="notice">
-      <li>機器の詳細（型式・仕様）については、承認・認証に関する確認が完了し次第、掲載いたします。</li>      <li>効能・効果・安全性に関する記載は、確認が完了するまで掲載しません。</li><li>このページは、医療機関・研究機関・販売店の方に向けた事業のご案内です。</li>    </ul>
-    <p class="note">キャパテクノ合同会社　高度管理医療機器等販売業 許可／管理医療機器販売業 許可</p>
+            <li>効能・効果・安全性に関する記載は、確認が完了するまで掲載しません。</li><li>このページは、医療機関・研究機関・販売店の方に向けた事業のご案内です。</li>    </ul>
+    <p class="note">　高度管理医療機器等販売業 許可／管理医療機器販売業 許可</p>
   </div>
 </section>
 
@@ -265,11 +378,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <small>&copy; 2026 CapaTechno LLC</small>
   </div>
 </footer>
+<button type="button" class="totop" aria-label="ページの先頭へ戻る" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 5l-7 7m7-7l7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>TOP</span></button>
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/capatechno/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script data-wp-strategy="defer" defer id="ct-roi-js" src="/capatechno-preview/wp-content/themes/capatechno/assets/js/roi.js?ver=0.1.0.1789388726"></script>
-<script data-wp-strategy="defer" defer id="ct-main-js" src="/capatechno-preview/wp-content/themes/capatechno/assets/js/main.js?ver=0.1.0.1789650472"></script>
+<script data-wp-strategy="defer" defer id="ct-roi-js" src="/capatechno-preview/wp-content/themes/capatechno/assets/js/roi.js?ver=0.1.0.1789692558"></script>
+<script data-wp-strategy="defer" defer id="ct-main-js" src="/capatechno-preview/wp-content/themes/capatechno/assets/js/main.js?ver=0.1.0.1790492521"></script>
 <script>document.addEventListener("submit",function(e){e.preventDefault();alert("確認用の試作サイトのため、送信はできません。");},true);</script>
 </body>
 </html>
